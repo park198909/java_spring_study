@@ -1,0 +1,147 @@
+5. 유용한 클래스
+java.lang.Math
+	- 수학관련기능
+		- abs() 절대값으로 변경
+		- 사학함수(sin,cos,tan) - "tan로 건물높이 구하기"시험에나옴!!!!!!!!!!
+		- ceil(올림),floor(버림),round(반올림)
+		- pow(a,b) 승수계산(a의b승 = a^b)
+		- random() 0~1사이 무작위수 반환
+		- PI 원주율 상수
+
+java.util.Objects : 객체를 다루는 편의기능
+	- java.util.Arrays : 배열을 다루는 편의기능
+	- java.util.Collections : 컬렉션 편의기능
+deepEquals(a,b) : 다차원 배열의 동일여부체크
+
+hash(...) : 다차원 배열의 동일여부체크 - 입력값이 가변매개변수
+
+...(가변매개변수) : 입력한 여러 값을 배열로 저장
+
+java.util.Random : 랜덤한 수를 생성하는 기능을 가진 클래스
+	.nextInt()
+	.nextDouble()
+	.ints().limit(숫자)
+	
+java.util.Scanner : 
+
+System.out : PrintStream 상속-> OutputStream
+System.in : InputStream
+								.read()
+
+java.util.StringTokenizer(문자열,구분자(문자)) : 구분자 단위로 문자열을 나눌때
+		.hasMoreTokens()	: 다음 구분자 뒤에 다음 문자가 존재하는지 참,거짓 반환
+		.nextString()			: 다음 구분자 뒤에 문자를 반환
+
+-----------------------------------------------------------------------------------------------
+
+열거형
+1. 열거형이란?
+상수만을 위한 클래스의 일종
+enum{
+	상수,상수,상수 ...
+}
+
+과거JDK -> 정적상수가 많았음(Calendar클래스 사용)
+JDK1.8이후 -> enum클래스 사용
+
+2. 열겨형 정의와 사용
+enum{
+	상수,상수,상수 ...
+}
+
+switch~case와도 같이 사용
+	- switch~case문 안에서는 상수를 바로 사용가능
+	Transportation trans = Transportation.SUBWAY;
+		switch (trans){
+							case BUS :
+									System.out.println("버스!");
+									break;
+							case SUBWAY:
+									System.out.println("지하철!");
+									break;
+							case TRAIN:
+									System.out.println("기차!");
+					}
+		
+모든 열거형(enum클래스)는 java.lang.Enum클래스를 상속한다. 
+abstract class Transportation extends java.lang.Enum{
+	public static final BUS = new Transportation();
+	public static final SUBWAY = new Transportation();
+	public static final TRAIN = new Transportation();
+}
+
+Enum클래스에 정의된 메서드
+	String name() : 상수의 이름을 반환
+	int ordinal() : 상수의 위치값(0,1,2,3...)을 반환
+	문자열을 enum상수로 변환 하는 매서드
+	-> valueOf(Class<T> enumClass, String name)
+	-> 각각의 Enum클래스에 컴파일러가 자동으로 추가해줌
+		->.valueOf(문자열) : 문자열을 Enum상수로 변환
+		->.values() : 모든상수를 배열로 반환		
+	
+열거형에 멤버 추가하기
+- 모든 생성자는 private 생성자이다. 
+- Enum상수는 목적이 상수,개별생성 불가
+- Enum클래스는 추상클래스 : 추상메서드 정의 가능
+
+-----------------------------------------------------------------------------------------------
+
+애너테이션(annotation)
+1. 애너테이션이란?
+- 주석,주해 : 정보전달이 목적이다.
+@interface 애너테이션명{
+	
+}
+- 모든 애너테이션은 java.lang.Annotation을 상속한다
+- 실제 구현체는 시스템이 만들어준다.
+
+2. 표준 애너테이션 
+	- JDK 기본 탑재된 애너테이션
+	- @Override : 재정의된 메서드임을 알려줌, 오타 시 컴파일러가 오류발생시킴
+	- @Deprecated : 삭제될 예정인 대상임을 알려줌
+	- @SuppressWarnings : 특정 경고메시지를 무시하게 해줌
+	- @FunctionalInterface : 함수형 인터페이스임을 알림
+	
+3. 메타 애너테이션
+	- 애너테이션을 만들때 필요한 애너테이션
+		->애너테이션 인터페이스에 적용되는 애너테이션
+		@Target(ElementType.METHOD)
+									.TYPE(클래스)
+									.FIELD(멤버변수)
+									.TYPE_USE(참조변수 매개변수)
+									.PARAMETER(매개변수)
+									.TYPE_PARAMETER
+		@Retention(RetentionPolicy.SOURCE)
+		public @interface Override {
+		}
+	- @Target
+		- 애너테이션의 적용범위를 지정
+		- @Target(ElementType.METHOD)
+	- @Retention
+		- 애너테이션이 적용기간(정보전달 시점)을 지정
+		- @Retention(RetentionPolicy.SOURCE)
+		- RetentionPolicy
+			.SOURCE : 소스(.java)상에 존재하고, 컴파일 완료 시에는 제거
+						- 컴파일러에게 정보 전달
+			.CLASS : 기본값, 소스(.java)상에도 존재하고, 컴파일 완료 후(.class) 존재함
+						- 정보전달을 하지 않는다.
+			.RUNTIME : 소스(.java)상에도 존재하고, 컴파일 완료 후(.class) 존재함
+						- 실행 중에 정보 전달
+
+4. 마커 애너테이션 : 정의된 내용이 없는 애너테이션
+
+-----------------------------------------------------------------------------------------------
+
+Object
+	- 여러 자료형을 수용할 수 있는 자료형
+
+지네릭스		
+1. 지네릭스란?
+- 타입 안정성
+- 형변환의 안정성
+
+2. 지네릭 클래스 선언
+
+						
+
+	

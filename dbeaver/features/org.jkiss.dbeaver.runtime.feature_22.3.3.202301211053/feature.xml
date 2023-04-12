@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+        id="org.jkiss.dbeaver.runtime.feature"
+        label="%featureName"
+        version="22.3.3.202301211053"
+        provider-name="%providerName"
+        plugin="org.jkiss.dbeaver.model">
+
+    <description>
+        %description
+    </description>
+
+    <copyright>
+        %copyright
+    </copyright>
+
+    <license url="%licenseURL">
+        %license
+    </license>
+
+    <requires>
+        <import plugin="org.eclipse.core.runtime"/>
+        <import plugin="org.eclipse.core.resources"/>
+        <import plugin="org.eclipse.core.expressions"/>
+    </requires>
+
+    <!-- Bouncycastle -->
+    <plugin id="bcpg" download-size="393" install-size="767" version="1.72.0" unpack="false"/>
+    <plugin id="bcprov" download-size="11009" install-size="21217" version="1.72.0" unpack="false"/>
+
+    <!-- 3rd party -->
+    <plugin id="com.github.jsqlparser" download-size="878" install-size="2259" version="4.5.0" unpack="false"/>
+    <plugin id="org.apache.commons.jexl" download-size="388" install-size="840" version="3.1.0" unpack="false"/>
+    <plugin id="com.google.gson" download-size="289" install-size="563" version="2.9.1.v20220915-1632"/>
+    <plugin id="com.jcraft.jsch" download-size="302" install-size="541" version="0.1.55.v20221112-0806" unpack="false"/>
+    <plugin id="org.apache.commons.logging" download-size="71" install-size="145" version="1.2.0.v20180409-1502" unpack="false"/>
+    <plugin id="org.objectweb.asm" download-size="134" install-size="264" version="9.4.0.v20221107-1714" unpack="false"/>
+
+    <!-- our plugins -->
+
+    <plugin id="org.jkiss.utils" download-size="120" install-size="233" version="2.1.181.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.model" download-size="2101" install-size="4473" version="1.0.187.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.model.dataset" download-size="16" install-size="26" version="1.0.3.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.model.sql" download-size="336" install-size="705" version="1.0.88.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.parser.common" download-size="96" install-size="214" version="1.0.15.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.registry" download-size="477" install-size="1100" version="1.0.92.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.net.ssh" download-size="67" install-size="105" version="1.0.119.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.net.ssh.jsch" download-size="26" install-size="43" version="1.1.108.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.net.ssh.sshj" download-size="25" install-size="43" version="1.0.119.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.cmp.simple" download-size="29" install-size="50" version="6.0.94.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.data.transfer" download-size="359" install-size="927" version="2.0.82.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.tasks.native" download-size="42" install-size="81" version="1.0.76.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.dbeaver.erd.model" download-size="72" install-size="153" version="1.0.58.202301211053" unpack="false"/>
+
+    <!-- GIS -->
+    <plugin id="org.jkiss.dbeaver.data.gis" download-size="37" install-size="67" version="1.0.122.202301211053" unpack="false"/>
+    <plugin id="org.jkiss.bundle.gis" download-size="1499" install-size="1648" version="2.0.5" unpack="false"/>
+    <plugin id="org.jkiss.bundle.sshj" download-size="669" install-size="766" version="0.34.1" unpack="false"/>
+
+</feature>

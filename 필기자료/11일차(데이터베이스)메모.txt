@@ -1,0 +1,395 @@
+데이터베이스
+
+-------------------------------------------------------------------------------------------------------------------------------
+복습
+
+프로그램 접속 및 로그인
+sqlplus 계정명/비밀번호
+
+계정 잠금 해제
+ALTER USER 계정명 INDENTIFIED BY 비밀번호 ACCOUNT UNLOCK
+
+계정 변경
+CONN 계정명/비밀번호;
+
+
+
+데이터 조작어(DML - Data Manipulation Language)
+
+생성
+CREATE USER 계정명 IDENTIFIED BY 비밀번호;
+	ROLE ROLE명;
+	
+수정
+ALTER USER 계정명 IDENTIFIED BY 비밀번호;
+	
+삭제
+DROP USER 계정명;
+	ROLE ROLE명;
+
+
+
+DCL - 데이터 통제어(권한) (Data Controll Language)
+권한 부여
+시스템 권한
+GRANT 권한명,... TO 계정명;
+	ALL PREVILIEGES
+	WITH ADMIN OPTION;
+객체권한
+GRANT 권한명... ON 테이블명.객체명 TO 계정명;
+	ALL PREVILIEGES
+
+권한 회수
+시스템 권한
+REVOKE 권한명, ... FROM 계정명;
+	ALL PREVILIEGES
+객체 권한
+REVOKE 권한명... ON 테이블명.객체명 FROM 계정명;
+	ALL PREVILIEGES
+
+부여하는 권한의 종류
+CREATE USER
+CREATE SESSION
+CREATE VIEW
+CREATE SEQUENCE
+CREATE ROLE
+CREATE SYNONYM
+
+정의되어 있는 ROLE
+CONNECT
+RESOURCE
+DBA
+
+데이터사전
+DICTIONARY = DICT
+	ALL_XXX
+	USER_XXX
+
+테이블 복제
+CREATE TABLE 테이블명 AS SELECT 복사할 테이블명;
+
+조회	
+	SELECT 컬럼명1,...[*] FROM 테이블명;
+추가
+	INSERT INTO 테이블명(컬럼명,...) VALUES('값','값',...);
+	INSERT INTO 테이블명  SELECT 값,...;
+수정
+	
+삭제
+	
+트랜잭션
+
+세션
+	
+LOCK
+	
+
+읽기의 일관성***
+
+***
+날짜 -> 기본형식 -> DATE
+
+***
+NULL=='' : 값이 없는 상태
+	
+
+
+
+데이터정의어(DDL - Data Definition Language)
+데이터의 무결성을 위한 '데이터의 틀'을 정의하는 언어
+DDL은 반영되면 바로 COMMIT 된다. (ROLLBACK이 불가하다)
+	테이블
+		항목명 자료형(숫자,문자,날짜)
+
+자료형
+	숫자
+			
+	
+	문자
+		
+	날짜
+		
+
+	기타
+		
+
+추가		
+	
+변경	
+
+이름변경
+	
+테이블 비우기
+	
+
+테이블 삭제
+	
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+객체 종류
+
+사용자 테이블
+USER 테이블
+
+데이터 사전 테이블
+DICTIONARY 테이블 = DICT(동의어)
+	ALL_XXX : 전체(모든 스키마) 데이터
+		ALL_TABLES : 사용자가 접근 가능한 모든 테이블
+		-OWNER항목 존재
+
+	USER_XXX : 현재 사용자(현재 스키마)의 데이터
+		USER_TABLES : 사용자가 보유한 테이블
+
+	DBA_XXX : system, sys 계정만 조회 가능
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+인덱스(INDEX) 
+
+목차 - 정보의 물리적위치를 기억하게 한다.(검색이 빨라지게 하기 위해)
+단, 데이터가 많아지면 서버에 부담이 간다.
+	Table Full Scan 					// 전체 데이터 조회
+	Index Scan					// 인덱스를 타고 조회
+
+정보
+	USER_INDEXES : 인덱스 정보 확인
+	USER_IND_COLUMNS : 인덱스가 적용된 컬럼 정보까지 포함해서 확인	
+
+	컬럼 데이터 위치, 정렬 방향 -> '이진트리 방식'으로 인덱스 구성
+	
+생성
+	CREATE INDEX 인덱스명 ON 테이블명(컬럼명1 ASC[DESC],컬럼명2 ASC[DESC], ...  );		
+	- 인덱스를 생성, ASC(오름차순)이 기본값
+	
+삭제
+	DROP INDEX 인덱스명;
+
+==> 선택도가 낮은 값일 수록(선택지가 많을 경우) 인덱스가 유리
+===> 검색이 많이 되는 항목, 정렬이 필요한 항목
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+뷰(VIEW) - DDL언어
+
+가상의 테이블
+다수의 테이블에서 필요한 데이터만 추려서 공유하는데 사용
+복잡한 SQL데이터 조회의 편의성
+
+생성
+	CREATE VIEW 뷰이름 AS SELECT 컬럼명 FROM 테이블명;	// 뷰 생성
+		WITH READ ONLY;				// 뷰의 접근성을 SELECT로 한정
+		WITH CHECK OPTION;			// 잘 안쓰임(제약조건을 만족하면 DML작업이 가능한 뷰)
+		
+수정
+	CREATE OR REPLACE VIEW 뷰이름 AS SELECT 컬럼명;	// 뷰이름이 있으면 수정, 없으면 생성
+
+삭제
+	DROP VIEW 뷰이름;					// 뷰 삭제
+
+정보확인
+	ALL_VIEWS					// 모든 허용된 뷰 조회
+	USER_VIEWS					// 보유한 뷰 조회
+
+인라인 뷰(서브 쿼리,WITH절)
+	SELECT ... FROM (SELECT ... FROM ...);			// ()안의 결과를 조회
+
+	WITH절
+	WITH 별칭 AS (인라인뷰)				// 인라인뷰를 별칭으로 저장(FROM을 짥게하고자)
+	
+
+-------------------------------------------------------------------------------------------------------------------------------
+***
+AS(Alias) 별칭
+테이블, 컬럼에 적용가능
+	
+	오라클 : 테이블 별칭 앞에 AS 사용 불가
+	MySQL : 테이블 별칭 앞에 AS 사용 가능
+	- 테이블명 "별칭" OR 별칭(띄어쓰기X) FROM 테이블명;		// 별칭.객체명으로 조회 가능
+	- 객체명 AS "별칭" OR 별칭(띄어쓰기X) FROM 테이블명;		// 별칭으로 조회 가능
+	
+ROWNUM
+모든 테이블에 있는 가상의 컬럼
+행 번호
+가상의 뷰(인라인 뷰)
+'~이상'의 조건이나 범위 조회 -> 인라인뷰 필수
+
+ 	예1) 조회된 3개의 행만 가져오기
+		MySQL : SELECT ... FROM LIMIT 시작시점=0, 추출 갯수=3;
+		오라클 : SELECT ... FROM 테이블명 WHERE 조건식(ROWNUM <=  3);	// ~이상 이라는 조건은X
+	
+	예2) 조회된 행 중 3번째부터 7번째 행 가져오기
+		MySQL : SELECT ... FROM LIMIT 시작시점=2, 추출 갯수=5;
+		오라클 : SELECT EE.* FROM (SELECT ROWNUM rnum, E.* FROM EMP E) EE 
+			WHERE EE.rnum >= 3 AND EE.rnum < 8;
+
+SEQUENCE
+증감번호
+	
+생성
+CREATE SEQUENCE 시퀀스명; 					// 1부터 1씩 증가
+	INCREMENT BY N						// N씩 증가
+	START WITH N						// N부터 시작
+	MAXVALUE N[NOMAXVALUE]				// 최대값
+	MINVALUE N[NOMINVALUE]					// 최소값
+	CYCLE[NOCYCLE]  						// 최대값-> 최소값
+	CACHE[NOCACHE]						// 기본값=20, 미리 번호를 할당해 놓는 기능
+
+수정
+ALTER SEQUENCE 시퀸스명;
+	- 생성방식과 동일
+
+정보확인
+ALL_SEQUENCES
+	USER_SEQUENCES
+
+시퀀스사용
+시퀀스명.CURRVAL : 현재 값만 반환
+시퀀스명.NEXTVAL : 다음 값 = 현재값을 반환 후 번호 증감
+INSERT INTO 테이블명(시퀀스 적용 객체명) VALUES(시퀀스명.NEXTVAL)
+	-> 테이블명.시퀀스적용객체 에 순차적으로 시퀀스 값 입력
+
+삭제
+DROP SEQUENCE 시퀀스명;
+
+
+
+DUAL
+SYS소속의 가상 테이블
+SELECT와 자주 쓰임 -> 값의 확인, 연산의 결과값 확인
+
+	예) SELECT SYSDATE FROM DUAL;				
+	- 가상 테이블에서 SYSDATE를 확인
+	- MySQL에서는 FROM DUAL 생략가능
+	
+
+
+동의어
+SYNONYM
+예) DICTIONARY = DICT	// 기본 생성된 동의어
+
+생성
+	CREATE [PUBLIC] SYNONYM 동의어명 FOR 스키마명.테이블명;		// 동의어 생성
+
+삭제
+	DROP SYNONYM 동의어명;						// 동의어 삭제
+		
+-------------------------------------------------------------------------------------------------------------------------------
+
+키(Key)
+
+회원정보
+아이디	회원명	이메일	휴대전화번호	주소
+USER01	사용자1	...	...		...
+USER02	사용자2	...	...		...
+USER03	사용자3	...	...		...
+
+주문정보
+주문상품	주문수량	배송주소	회원명
+상품1	3	주소	사용자1
+
+
+후보키 - 테이블의 행을 대표할 수 있는 컬럼(기본키의 후보들의 모음)
+	예) 아이디, 휴대전화번호, 이메일, 주민등록번호, 아이디+회원명, 회원명+이메일, ...
+기본키 - 후보키에서 선정된 1개의 키 = PRIMARY KEY
+대리키 - 기본키를 정하기 어려운 경우 대신할 수 있는 키(증감번호 등) -> 기본키가 민감하거나 애매한 정보일 경우 사용
+외래키 - 다른 테이블과 관계를 맺고 있는 키 = FOREIGN KEY
+	- 오라클 - 관계형 데이터베이스 : '데이터의 무결성'을 위해 : 각 테이블 간 동일정보의 오차를 없애기 위함
+	- boardDatas.idmanager == manager.id (외래키)
+
+
+
+
+
+데이터무결성 제약조건
+1) 영역(도메인) 무결성 제약조건
+	- 동일한 자료형 값만을 허용한다.
+2) 개체 무결성 제약조건
+	- 기본키(PRIMARY KEY) : 유일한 값(UNIQUE) + NOT NULL
+3) 참조 무결성 제약조건
+	- 외래키(FOREIGN KEY) : 테이블 간 동일자료의 오차가 없음을 증명
+
+
+예) CREATE TABLE 테이블명(
+	컬럼명 자료형 [제약조건]
+);
+
+
+
+
+
+
+제약조건
+
+생성
+CREATE TABLE 테이블명(
+	컬럼명 자료형 제약조건명 [제약조건];
+);
+
+조건 변경
+ALTER TABLE 테이블명 MODIFY 컬럼명[자료형] CONSTRAINT 제약조건명 [제약조건];
+
+제약조건명 변경
+ALTER TABLE 테이블명 RENAME CONSTRAINT 제약조건명 TO 변경할 제약조건명;
+	- 변경제약조건명 : 제약조건_테이블명_컬럼명 형태로 추천
+
+조건 삭제
+ALTER TABLE 테이블명 DROP CONSTRAINT 제약조건명;			// 제약조건 제거
+
+NOT NULL
+	- NULL을 미허용(필수항목)
+
+정보확인
+	ALL_CONSTRAINTS
+	USER_CONSTRAINTS
+	ALL_CONS_COLUMNS
+	USER_CONS_COLUMNS
+
+UNIQUE
+	- 중복 미허용
+	- NULL값 허용
+
+	CONSTRAINT_TYPE(컬럼명임)
+		C : 일반제약조건(NOT NULL)
+		U : UNIQUE
+		P : PRIMARY KEY
+		R : FOREIGN KEY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

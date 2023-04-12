@@ -1,0 +1,136 @@
+예외처리
+1. 오류와 예외
+
+오류(Error)
+	- 서버,물리적 환경상의 오류
+	- 프로그래머가 통제 불가한 오류
+	
+예외(Exception)
+	- 코드 상에서 발생하는 오류(버그)
+	- 프로그래머가 통제 할수 있는 오류
+ 
+2. 예외 클래스의 종류
+Throwable
+	Error
+	
+	Exception
+		IOException
+			java.io
+				FileInputStream : FileNotFoundException
+			- 예외가 발생하는 안하든 예외처리를 하지 않으면 컴파일X
+			- 컴파일시에 체크되는 예외
+			- 엄격한 예외
+			- 형식이 매우 중요!
+			- 예외를 전가, 반드시 전가시키는 예외를 명시(throws)
+			
+			
+	Exception	
+		RuntimeException : 실행
+			arithmethicException
+				- 숫자를 0으로 나누면 발생하는 오류
+				- 예외가 실행중에 체크되는 예외
+				- 실행이 되려면 컴파일이 필요하므로 컴파일은 된다.
+				- 유연한 예외
+				- 예외 전가시 형식이 X(throws 명시X)
+	
+	
+3. 예외 처리하기:프로그램에 문제가 있더라도 서비스가 멈추지 않도록 막는 방식
+1) try-catch-finally문
+
+try{
+	// 예외가 발생할지도 모르는 코드
+} catch(발생할 예외 객체){
+	// 예외가 발생했을때 처리할 코드
+} finally{
+	// 예외가 발생하든 안하든 항상 수행되는 코드
+}
+
+
+리소스:서버 자원(메모리)
+	-> 파일 읽기, 데이터 베이스 데이터를 조회 -> 리소스
+
+throw 예외객체
+
+FileNotFoundException e = new FileNotFoundException();
+IOException e = new FileNotFoundException();
+Exception e = new FileNotFoundException();
+
+Throwable클래스
+	getMessage() 메서드
+	ptintStackTrace() 메서드
+ 
+
+2) try-with-resource문
+try(자원 해제가 필요한 리소스 선언){
+	// 예외가 발생할지도 모르는 코드
+}	catch(발생할 예외 객체){ 
+	// 예외가 발생했을때 처리할 코드
+} finally{ ... }
+
+- AutoCloseable 인터페이스의 구현체인 경우만 가능
+	- close()를 자동으로 호출
+	- 라이브러리에 저장된 생성자 클래스들은 기본적으로 
+		close()의 대한 구현체가 정의되어 있다.
+	- 새로 작성하는 클래스의 경우는 implement AutoCloseable을
+		하고 close()의 대한 구현체를 정의해야놔야 한다.
+	
+
+4. 예외 처리 미루기
+- 예외 처리를 하지 않고 호출하는 메서드에서 처리를 전가
+
+
+
+5. 다중 예외 처리
+	
+	
+
+6. 사용자 정의 예외
+Exception클래스를 상속 받으면 사용자 정의 예외가 된다
+
+throw 예외객체;
+	
+	
+-------------------------------------------------------------
+
+java.lang 패키지
+
+컴파일러가 기본으로 추가하는 패키지
+1. 패키지명 바로 아래 추가-> java.lang.*;
+		java.lang.String
+		java.lang.Object(자동 상속되는 클래스)
+2. 상속이 명시되지 않은 클래스 -> extends Object
+3. 기본생성자 -> public클래스명(){}
+4. 모든 생성자의 첫번째 라인 -> super();
+5. 인터페이스 
+		모든메서드 -> public abstract
+		모든상수 -> public static final
+6. 지역 내부 클래스
+		지역변수의 상수화 -> final 지역변수명;
+		
+Object클래스
+
+1.toString()메서드
+public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
+	- 패키지명.클래스명@인스턴스주소 가 저장된다.
+	- 주로 toString()메서드를 재정의
+		-> 멤버변수의 값을 확인하는 용도로...
+	
+2. equals()메서드
+public boolean equals(Object obj) {
+        return (this == obj);
+    }
+		
+	- == : 주소의 비교
+3. hashCode()메서드
+	- 기본정의 : 인스턴스의 주소(물리적 주소 X, JVM이 인식하는 가상의주소)
+
+
+		
+		
+		
+		
+		
+
+		

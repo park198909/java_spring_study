@@ -1,0 +1,91 @@
+SQL활용
+
+------------------------------------------------------------------
+다중행 함수와 데이터 그룹화
+
+함수
+단일행 함수
+	- 하나의 행에 있는 값
+	- 문자
+		CONCAT
+		||(OR)
+		SUBSTR
+		REPLACE
+	숫자
+		TO_NUMBER
+		ROUND
+		CEIL
+		FLOOR
+	날짜
+		TO_DATE
+	형식
+		TO_CHAR -> 숫자나 날짜를 형식화
+다중행 함수
+	여러행 결과 -> 값
+	통계용 함수
+		SUM ,AVG, COUNT, MAX, MIN
+		[ALL | DISTINCT]
+		ALL - 전체
+		DISTINCT - 중복제외(중복값들은 1개로 취급)
+		NULL은 통계에서 제외된다.(없는 취급)
+	다중행 함수는 WHERE절에서 사용 불가
+	
+1) 하나의 열에 출력결과를 감는 다중행 함수
+	GROUP BY 컬럼명; : 컬럼명의 공통 값을 가지고 행을 묶어주는 기능
+	주로 WHERE 절 뒤에 많이 나온다.
+	공통값의 갯수가 행의 갯수
+	출력되는 컬럼은 GROUP BY에 명시된 컬럼명
+	예) 부서 번호별 급여 통계
+	예) 부서별+직책별 급여 통계
+	
+2) 결과 값을 원하는 열로 묶어 출력하는 GROUP BY절
+	GROUP BY 와 집계함수 조건식은 WHERE절 사용불가
+	-> HAVING 사용
+	-> GROUP BY뒤에 나온다.
+	예) 부서별 급여통계,평균급여가 2000불 이상인 통계
+	SELECT
+		DEPTNO,
+		JOB,
+		SUM(SAL) 합계,
+		ROUND(AVG(SAL)) 평균
+	FROM EMP
+	GROUP BY DEPTNO,JOB
+	HAVING AVG(SAL)>=2000
+	ORDER BY DEPTNO,JOB;
+	
+2-1) 오라클에만 있는 통계관련 함수
+	예)	SELECT
+			DEPTNO,
+			JOB,
+			SUM(SAL) 합계,
+			ROUND(AVG(SAL)) 평균,
+			MAX(SAL) 최대,
+			MIN(SAL) 최소
+		FROM EMP
+		GROUP BY ROLLUP[CUBE,LISTAGG](DEPTNO, JOB);
+	
+	ROLLUP - 동일 자료별 통계 + 전체 통계
+	CUBE - 각각의 컬럼별 통계 + 동일 자료별 통계 + 전체 통계
+	LISTAGG(컬러명,'구분표시') 
+------------------------------------------------------------------
+
+여러 테이블을 하나의 테이블처럼 사용하는 조인(JOIN)
+1. 등가 조인(동등조인)
+	- 공통 값을 가지고 조인
+	- 내부 조인(INNER JOIN) = 동등 조인
+	- 교집합
+	
+2. 비등가 조인
+	- 공통 값이 아니고, 비교를 통해서 암묵적으로 조인
+	- 연결점X,비교를 통해서 조인
+	
+3. 자체 조인
+	- 동일 테이블 내의 컬럼으로 조인
+	
+4. 외부 조인(OUTER JOIN)
+	+a(추가 데이터)
+	부서 정보를 조회 + 서브 정보가 있으면 추가로 조회
+	-> 부서 정보 전체, 서브 정보가 있으면 나오고 없으면 안나온다.
+	->추가 정보를 제공하는 테이블(+)
+	예)	SELECT * FROM DEPT D, DEPT_SUB S
+		WHERE D.DEPTNO = S.DEPTNO(+);

@@ -1,0 +1,54 @@
+깃허브 사용법
+
+1. 설치
+	git-scm.com
+	
+2. 로컬 레포지터리(저장소)
+	git init - 해당 폴더에서 git bash창 열고 입력하여 레포지터리 생성
+
+3. 계정연결
+	- 원격 레포지터리인 깃허브 계정과 연결
+	git config --global user.name "유저명"
+	git config --global user.email "이메일주소"
+	
+4. 형상관리
+	1)스테이지 단계
+		git add 파일명,파일경로
+		git add .(모든 파일)
+		
+	2) 스냅샷 단계
+		git commit -m "메모(변경한 내용)"
+	
+	3) 커밋로그 확인
+		git log
+		
+	4) 버전 관리
+		git checkout 커밋ID(커밋로그시 길게나오는 코드)
+
+	 	git checkout -(가장 최근 커밋단계로 복구)
+
+5. 브랜치(저장공간) 관리
+	master - 기본 브랜치
+	
+	git branch 브랜치명 - 브랜치 생성 -> 현재 브랜치파일을 생성된 브랜치로 복사
+
+	git branch - 브랜치리스트 확인
+
+	git checkout 브랜치명 - 브랜치 변경
+
+	git branch -d 브랜치명 - 브랜치 삭제
+	git branch -D 브랜치명 - 브랜치 강제 삭제
+	
+6. 소스 합치기
+	git merge 브랜치명 - 현재브랜치에 브랜치명의 소스가 합쳐진다.	
+
+7. 로컬 레포지터리를 원격 레포지토리에 연결
+	git remote add origin 원격 레포지터리 주소 - 원격 레포지토리에 연결
+
+8. 로컬 레포지터리 상태를 원격 레포지터리에 반영
+	git push origin 원격브랜치 - 원격 레포지터리에 저장
+
+9. 원격 레포지터리 상태를 로컬 레포지터리 상태로 동기화
+	git pull origin 원격브랜치 - 작업 시작 전 실행 필수
+
+

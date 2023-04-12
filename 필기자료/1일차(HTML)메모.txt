@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head> // 보이지 않는 영역들을 정의한다.
+	<script>
+	<title>
+	<meta>
+	<link>
+	<CSS>
+</head>
+<body> // 실제 출력되는 영역들을 정의한다.
+	<div>
+	<span>
+	<a>
+	<ul>
+	<li>
+</body>
+</html>
+
+요소(Element) == 태그
+
+태그구성
+<태그명></태그명>
+
+내용이 없는 태그
+<태그명 />
+<태그명>
+- meta
+- br : <br/>, <br>
+- img : <img />, <img>
+
+HTML속성(attribute)
+	태그에 추가되는 추가정보
+	명칭=값
+	<태그명 속성1="값" 속성2="값" 속성3="값" 속성4="값">
+
+	a : 링크 태그 - 링크 이동
+		href="주소"
+  
+	img : 이미지 출력
+		src="이미지 경로"
+		alt="시각장애인을 위한 이미지설명텍스트"
+
+HTML 문서
+- 문서와 관련된 태그
+1. 헤더 태그 - 제목
+	h1~6	// 헤더의 폰트사이즈차이
+	h1(제목) h2~6(부제)
+
+2. 문단 태그 - p (Paragraph)
+
+3. 서식 태그
+
+b -> bold : 두껍rp
+em	: 강조
+i	: 기울임
+small
+strong	: 중요한
+sub
+sup
+del - strike : 취소선
+u 	: 밑줄
+
+4. HTML주석 - 설명
+<!-- 설명 --> : 브라우저가 해석X -> 출력 X
+
+
+5. 링크 태그
+a
+	- href : 주소
+	- target : 웹페이지가 출력될 창(Window)
+		- "_self" : 현재페이지에서 이동 - 기본값
+		- "_blank" : 새탭에서 페이지 이동(새 창을 열고 거기서 페이지 이동)
+		- "_parent" : 부모창에서 페이지 이동(현재 창에서 링크 클릭시 부모창의 페이지가 이동됨)
+		- "_top" : 가장 상위의 창에서 페이지 이동 (현재 창에서 링크 클릭시 가장 상위창의 페이지가 이동됨)
+		- "_iframe의 이름(name속성값)"
+
+6. iframe태그 : 문서 안에 포함되는 브라우저
+iframe
+	- src="조회할 주소"
+	- width="너비"
+	- heigh="높이"
+
+7. 경로
+절대 경로
+  src="C:\Users\Administrator\Desktop\박영근\1.화면구현\HTML\logo.png"
+상대 경로
+  - src="logo.png"
+  -기준 경로 
+   - file:///C:\Users\Administrator\Desktop\박영근\1.화면구현\HTML 까지
+    
+   - cd(Change Directory)
+    - cd .. 상위경로로 이동
+
+7. 이미지 태그
+img : 이미지 출력
+  - src="이미지 경로"
+  - alt="시각장애인을 위한 이미지설명텍스트"
+
+
+
+

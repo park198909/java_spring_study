@@ -1,0 +1,150 @@
+데이터베이스
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+복습
+
+DML - ROLLBACK가능 : 주로 테이블의 내용(객체)에 적용되는 언어
+SELECT
+	SELECT * FROM 테이블명;	테이블 조회
+INSERT
+	INSERT INTO 테이블명[객체명,객체명,..] VALUES (값,값,...)
+UPDATE
+DELETE
+
+DCL - 권한부여
+GRNAT
+REVOKE
+
+DDL - ROLLBACK불가 : 주로 스키마 및 테이블을 생성하고 삭제하는 언어
+CREATE
+ALTER
+DROP
+RENAME
+TRUNCATE
+
+제약조건
+NOT NULL
+UNIQUE
+
+CONSTRAINT
+
+인데스
+INDEX
+
+뷰
+VIEW
+
+시퀀스
+SEQUENCE
+
+데이터사전
+DICTIONARY = 데이터 사전의 목차를 담은 가상테이블(뷰)
+	USER_DICT
+	ALL_DICT
+키
+후보키
+기본키(PRIMARY KEY)
+대리키
+외래키(FOREIGN KEY)
+
+트랜잭션
+세션
+COMMIT
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+3/23
+
+외래키의 제약조건
+- 외래키가 생성되어 있으면 부모 테이블의 데이터는 삭제가 불가하다. 
+
+
+제약조건 생성
+CREATE TABLE 테이블명(
+	컬럼명 자료형 CONSTRAINT 제약조건명 [제약조건]
+);
+
+제약조건 변경
+ALTER TABLE 테이블명 MODIFY 컬럼명 자료형 CONSTRAINT 제약조건명 [제약조건]
+
+제약조건 삭제
+DROP TABLE 테이블명 DROP CONSTRAINT 제약조건명;
+
+제약조건명 변경
+ALTER TABLE 테이블명 RENAME CONSTRAINT 기존조건명 TO 새로운조건명;
+
+제약조건 정보확인
+ALL_CONSTRAINTS
+USER_CONSTRAINTS
+ALL_CONS_COLUMNS
+USER_CONS_COLUMNS
+
+CONSTRAINT_TYPE
+	C : NOT NULL, CHECK
+	P : PRIMARY KEY
+	U : UNIQUE
+	R : FOREIGN KEY
+
+
+NOT NULL
+	- NULL을 미허용(필수항목)
+	- NULL : 값을 지정하지 않음, 연산불가(연산은 값이 있어야 가능하다)
+	- 오라클 : NULL 과 빈값을 동일함 | MySQL : NULL과 빈값은 다르다.
+
+UNIQUE
+	- 중복 미허용
+	- NULL은 허용됨
+	- 컬럼1+컬럼2 -> 조합결과에 UNIQUE도 가능 => UNIQUE(컬럼1,컬럼2)
+
+PRIMARY KEY
+	- 중복,NULL 미허용 ( UNIQUE + NOT NULL)
+	- 테이블당 1개의 객체에만 적용가능
+	- 컬럼1+컬럼2 -> 조합결과에 PRIMARY KEY도 가능 => PRIMARY KEY(컬럼1,컬럼2)
+	- ALTER TABLE 테이블명 ADD CONSTRAINT 제약조건명 PRIMARY KEY(컬럼1,컬럼2,...);	
+
+FOREIGN KEY
+CREATE TABLE 테이블명(
+	컬럼명 자료형 CONSTRAINT 제약조건명 REFERENCES 테이블명(컬럼명)
+); 
+	- 제약조건 : 부모테이블 데이터가 자식테이블 데이터와 연관있으면 삭제 불가
+	- ON DELETE CASCADE 입력시 외래키가 있는 자식데이터까지 삭제된다.
+	- ON DELETE SET NULL 입력시 자식데이터의 외래키가 NULL이 된다.
+	- 부모테이블 : 자식테이블이 참조하는 기본키가 있는 테이블 | 자식테이블 : 외래키가 있는 테이블
+
+*** 	컬럼이 삭제되면 걸려있는 모든 제약조건이 삭제된다.	***
+
+CHECK
+	- CHECK(조건식);
+	- LENGTH(문자열) -> 문자의 갯수
+	- LENGTHB(문자열) -> 문자의 바이트 수
+	- MySQL : LENGTH(문자열) -> 문자의 바이트수, CHAR_LENGTH(문자열) -> 문자의 갯수
+
+DEFAULT
+	- 기본값
+	- 값이 NULL이면(따로 추가하지 않으면) 자동 추가되는 값
+
+제약조건 활성/비활성화
+
+ALTER TABLE 테이블명 ENABLE[ DISABLE ] CONSTRAINT 제약조건명;
+
+
+테이블 설명서 작성
+테이블명, 자료형, 제약조건, 조건설명 은 필히 넣을 것
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

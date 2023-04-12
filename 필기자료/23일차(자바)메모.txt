@@ -1,0 +1,47 @@
+java.lang 패키지
+
+컴파일러
+1) import java.lang.*;
+	- java.lang.String;
+	- java.lang.Object;
+2) extends Object
+3) 기본 생성자(public 클래스명(){})
+4) 생성자의 첫 줄에 super()
+5) 인터페이스 - 메서드 : public abstract
+					 - 정적 상수 : public static final
+6) 지역 내부 클래스 
+		- 지역변수의 상수화(final)
+		
+		
+Object 클래스
+1.toString()메서드
+		-> 참조변수 호출 -> 자동 추가 호출
+	
+	public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
+		
+	Class getClass(){}
+		-> Class 클래스 : 클래스의 정보가 담겨 있는 객체
+		-> 클래스로더 -> 클래스 파일이 메모리에 올라갈때 생성되는 객체
+		
+	Class : 모든 클래스의 정적 변수(class)
+
+2.equals()메서드
+	Object.equals()
+
+	public boolean equals(Object obj) {
+        return (this == obj);
+    }
+		
+	== : 주소의 비교:동일성비교
+	
+	Book
+	String
+
+
+	동일성비교 : == /같은 주소인지,완전히 동일한 객체
+	
+	동등성비교 : .equals() /값의 동등 여부 
+
+3.hashCode()메서드

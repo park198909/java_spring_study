@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/** 공통 스타일 */
+* { outline: none; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; color: #212121; }
+body { margin: 0; }
+ul,ol { list-style-type: none; margin: 0; padding: 0; }
+li { margin: 0; padding: 0; }
+a { text-decoration: none; }
+img { border: 0; }
+html { font-size: 13px; }
+/** 헤더 - 로고,메뉴 영역 S */
+header #logo_menus { display: flex; justify-content: space-between; padding: 18px 15px; border-bottom: 1px solid #ddd; }
+header #logo_menus a img { height: 34px; }
+header #logo_menus .left a i { font-size: 2.31rem;}
+header #logo_menus .right a i { font-size: 2.31rem;}
+nav { display: flex; }
+nav a { flex-grow: 1; width: 0; text-align: center; padding: 15px 0px;}
+/** 헤더 - 로고,메뉴 영역 E */
+
+/** 메인 - 메인 배너 S */
+#main_banner img { width: 100%; display: block; }
+/** 메인 - 로고,메뉴 E */
+
+/** 메인 - 서브 메뉴 S */
+#sub_menus {display: flex; flex-wrap: wrap; border-left: 0; border-right: 0; border-top: 10px solid #ededed; border-bottom: 10px solid #ededed; }
+#sub_menus a { width: calc(100% / 3); text-align: center; height: 50px; line-height: 49px; 
+    font-weight: 500; border-top: 1px solid #ededed; border-left: 1px solid #ededed;
+}
+#sub_menus a:nth-of-type(1),
+#sub_menus a:nth-of-type(2),
+#sub_menus a:nth-of-type(3) { border-top: 0; line-height: 50px; }
+#sub_menus a:nth-of-type(3n+1) { border-left: 0; }
+/** 메인 - 서브 메뉴 E */
+
+/** 메인 - 서브 배너  S */
+#sub_banners { display: flex; flex-wrap: wrap;}
+#sub_banners img:nth-of-type(1) { width: 100%; }
+#sub_banners img:nth-of-type(2),
+#sub_banners img:nth-of-type(3) { width: calc(100% / 2); margin-bottom: 20px; }
+/** 메인 - 서브 배너  E */
+
+/** 메인 - 상품 목록  S */
+.goods_list h3 { padding: 20px; font-size: 1.538rem; line-height: 1; text-align: center; }
+/** 메인 - 상품 목록  E */

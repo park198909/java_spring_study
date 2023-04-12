@@ -1,0 +1,150 @@
+CSS
+레이아웃
+박스사이징(box-sizing)
+	box-sizing: content-box; -> 내용물의 사이즈 ->기본값
+	box-sizing: border-box; -> 내용물의 사이즈+패딩
+
+
+보더(border)
+	border: 두께 스타일 색상;
+	border-width : 두께;
+	border-style : solid dotted dashed(선종류);
+	border-color : 경계선 색상;
+
+	border-left: 두께 스타일 색상;
+	border-right: 두께 스타일 색상;
+	border-top: 두께 스타일 색상;
+	border-bottom: 두께 스타일 색상;
+	*** margin,padding도 동일
+
+	border-radius: 수치; -> 수치만큼 모서리를 둥글게
+
+
+포지션(position)
+	고정된 위치(기본값)
+		position: static; 
+	상대적 위치
+		position: relative; 현재 요소의 위치에서 px 만큼 이동
+		position: absolute; 문서 전체의 좌측 상단 기준(여백X=0,0)으로 px만큼 이동
+		조상요소에 상대배치 속성(relative,absolute,fixed)이 있는 경우
+		- 기준이 조상요소의 위치
+		position: fixed; viewport(보이는화면)을 기준으로 px만큼 이동
+			top 위-> 아래
+			bottom 아래-> 위
+			left 좌 -> 우
+			right 우 -> 좌
+
+z-index
+	z-index: 값; 숫자가 높을수록 앞에, 낮을수록 뒤에, 상대배치에서만 가능
+
+
+플로트(float) & 클리어(clear)
+	float: left | right | none;
+	clear: left | right | both; float속성을 제거해야만(다른 요소에도 간섭하게됨) -> 블록요소(공간O)로만 클리어 가능
+
+
+
+미디어쿼리(media query)
+	@medai 장비종류(all) and (max-width | min-width)
+		max-width : 최대 사이즈에 도달 전까지 적용
+		min-width : 최소 사이즈에 도달 후부터 적용
+
+
+백그라운드(background)
+	background-color: (색상명,rgb(),rgba(),#hex);
+	background-image: url('주소');
+	background-repeat: repeat-x;
+	background-repeat: repeat-y;
+	background-repeat: no-repeat;
+	background-position: 좌우 상하;
+			    left | right | center; 	
+		예) background-position: 100px 200px; => 좌->우100px  상->하200px
+		예) background-position: center center
+	backgruond: 색상(생략가능) url() 반복속성(repeat) 위치(x y);
+	
+	
+오버플로우
+	overflow: visible; 넘치더라도 보이게 함
+	overflow: hidden; 넘치는 부분 감추기
+	overflow: scroll; 스크롤 생성(항상)
+	overflow: auto; 내용이 넘치면 스크롤 생성
+
+
+트랜지션: 스타일 적용 전환 효과
+	transition-property: 스타일속성,....; 
+	transition-duration: 초단위(전환지속시간); 
+	transition-timing-function: linear | ease | ease-in | ease-out | ease-in-out; 
+	transition-delay: 초단위(전환시작전 대기시간); 
+	transition: property duration timing-function delay ; 
+	
+						
+트랜스폼
+	transform: rotate(각도); 각도만큼 회전
+
+
+flex박스
+display: flex; 부모요소에 선언 후 사용 -> 자식 요소의 배치 통제
+	- 흐름 조절
+	flex-direction: row; 좌->우
+	flex-direction: row-reverse; 우->좌
+	flex-direction: column; 위->아래
+	flex-direction: column-reverse; 아래->위
+	- 좌우 조절
+	(중요) justify-content: flex-start; 왼쪽
+	(중요) justify-content: flex-end; 오른쪽
+	(중요) justify-content: center; 가운데
+	(중요) justify-content: space-around;
+	(중요) justify-content: space-evenly;
+	(중요) justify-content: space-between;
+	- 상하 조절
+	align-items: stretch; 부모요소에 맞춰 위아래 사이즈 늘림(기본값) 
+	align-items: flex-start; 위쪽부터 배치
+	align-items: center; 가운데부터 배치
+	align-items: flex-end; 아래쪽부터 배치
+	- 줄간 배치 조절
+	flex-wrap: nowrap; 한줄(기본값)
+	flex-wrap: wrap; 꽉 차면 다음칸
+	
+	자식요소에 바로 적용
+	flex-grow: 숫자; 여백을 나누어 갖는 비율설정
+		-여백을 공평하게 나누기 위해선 다른 객체들의 width를 0으로 지정해야 한다.
+a태그 text-decoration
+	text-decoration: underline; 밑줄
+	text-decoration: italic;
+	text-decoration: none;
+
+/** 공통 스타일  */
+* { outline: none; }
+body { margin: 0; }
+ul,ol { list-style-type: none; margin: 0; padding: 0; }
+li { margin: 0; padding: 0; }
+a { text-decoration: none; }
+img { border: 0; }
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

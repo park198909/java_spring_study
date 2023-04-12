@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>연습!</title>
+        <meta charset="utf-8">
+    </head>
+    <style>
+        /*
+        li:not(.menu5){ background: orange;}
+        */
+        /*
+        li:first-child{ background: blue;}
+        li:last-child{ background: orange;}
+        */
+        li:nth-child(2n+1) { background: orange;}
+
+        ul::after{ content: 'AFTER';}
+        ul::before{ content: 'BEFORE';}
+    </style>
+    <body>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li class="menu5">메뉴5</li>
+            <li>메뉴6</li>
+            <li>메뉴7</li>
+            <li>메뉴8</li>
+            <li>메뉴9</li>
+            <li>메뉴10</li>
+            <li>메뉴11</li>
+        </ul>
+    </body>
+</html>
