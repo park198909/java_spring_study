@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Juicer {
 
-    public static  void make(Box<? extends Fruit> fruits){ //와일드카드-> ?는 메서드가 호출시 결정됨, Fruit포함 하위클래스로 제한
+    public static void make(Box<? extends Fruit> fruits){ //와일드카드-> ?는 메서드가 호출시 결정됨, Fruit포함 하위클래스로 제한
         List<?> items = fruits.getItems();
         System.out.println(items);
     }
