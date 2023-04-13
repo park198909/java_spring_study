@@ -1,0 +1,135 @@
+컬렉션 프레임워크
+(Collection Framework)
+
+컬렉션(Collection)
+	- 데이터 군 : 많은 데이터
+	- 자료
+	
+프레임워크(Framework)
+	- 표준화된 설계틀
+
+데이터군을 다루는데 표준화된 설계틀
+	- 표준화의 기준 : 자료 구조
+		1) Collection인터페이스
+			- 순차 자료 구조
+				List인터페이스
+					- 순서가 있는 자료
+					- 중복 값 저장이 허용됨
+			
+			- 집합 자료 구조
+				Set인터페이스
+					A - 1,2,3,4,5
+					B - 4,5,6,7
+					A UNION B - 1,2,3,4,5,6,7
+					- 중복이 없는 자료
+					- 순서가 유지되지 않는다.
+				
+		2) 사전 자료 구조
+			Map인터페이스
+				- 키, 값의 쌍 구조로 이루어져 있다.
+				- 키를 통해 값을 조회 가능
+				- 키는 중복이 안된다.(Set형태)
+				- 값은 중복을 허용한다.(List형태)
+				
+1. 컬렉션 프레임워크 핵심 인터페이스
+E - element : 요소
+
+2. Collection인터페이스 
+
+	2-1. List인터페이스 : 순서가 있는 자료구조
+		add(E e)
+		add(int index,E e)
+		E get(int index)
+		E remove(int index)
+		remove(Object e)
+		contains(...)
+		set(int index, E e)
+		int size() : 요소의 갯수
+		
+		List의 구현부를 정의한 클래스(* implements List)
+			ArrayList - 배열
+				- 물리적배열로 구성
+				- 장점 : 조회속도가 빠르다.
+				- 단점 : 앞, 중간 데이터의 추가,수정,삭제 시
+						-> 물리적 배열이 계속 생성(공간이 2배로)
+						-> 성능 저하
+						
+				- 요소 제거시 앞에서부터 제거하면 배열이 재구성되므로 
+				뒤에서부터 제거해야함 : 스택구조와 비슷하다.
+						
+			LinkedList
+				- 요소 요소의 주소를 연결하여 순서를 만든다.
+				- 장점 : 요소의 추가,수정,삭제가 빠르다.
+				- 단점 : ArrayList보다 조회속도가 느리다.
+			
+				- Queue 인터페이스의 구현체
+					offer() : 끝에 추가
+					poll() : 처음 들어간 데이터 꺼내기
+			Stack
+				pop() : 마지막에 들어간 데이터 꺼내기
+				push() : 끝에 추가
+			Vector
+			
+	2-2. Set인터페이스 : 중복이 없는 자료구조
+		add(E e)
+		remove(Object e)
+		contains(Object e)
+		size(...)
+		
+		Set의 구현부를 정의한 클래스(* implements Set)
+		HashSet : 검색을 용이하게 하는 구조를 가진 클래스
+		TreeSet : HashSet+정렬기능
+		
+		정렬기준
+			java.lang.Comparable<T>
+				int compareTo(T o) : 재정의하여 사용
+					return o.id - o;	// 오름차순
+					return o - o.id // 내림차순
+					
+			대안 정렬 기준
+				java.util.Comparator인터페이스
+		
+	2-3. Map인터페이스 : 키+값 의 쌍구조 자료구조
+		V put(K k, V v) : 추가, 수정
+		V get(Object key) : 조회
+		V remove(Object key) : 제거
+		boolean containsKey(Object key)	: 존재 확인
+		boolean containsValue(Object value) : 존재 확인
+		
+		Set<K> keySet() : 모든 키를 모아놓은 배열
+		Collection<V> values() : 모든 값을 모아놓은 배열
+		
+		Map의 구현부를 정의한 클래스(* implements Map)
+			- HashMap
+				.entrySet() : 순서쌍 객체(Map.Entry<K,V>)를 Set형태로 가져옴
+				Map.Entry<K,V> : 키와 값이 저장되는 순서쌍 객체의 형태  
+					for(Map.Entry<String, String> entry : members.entrySet()){
+						String key = entry.getKey();
+						String value = entry.getValue();
+						System.out.println("key="+key+", value="+value);
+					} // HashMap의 모든 값 조회,출력
+			- TreeMap : HashMap + 정렬기능			
+			
+7. Iterator, ListIterator, Enumeration 
+
+Iterator<E>
+	- boolean hasNext() : 다음 추출요소가 있는지 확인
+	- E next() : 다음 요소를 추출하여 반환
+	
+ListIterator
+	- List인터페이스에 정의되어 있다.
+	- hasPrevious() : 이전 추출요소가 있는지 확인
+	- previous() : 이전 요소를 추출하여 반환
+	
+Enumeration
+	- boolean hasMoreElements() : 다음 요소가 있는지 체크
+	- E nextElements() : 다음 요소 추출하여 반환
+	
+	
+9. Arrays : 배열 편의기능
+java.util.Arrays : 편의기능(util에 ~s는 편의기능 모음)
+
+10. Collections : Collection 편의기능
+java.util.Collections : 편의기능(util에 ~s는 편의기능 모음)
+
+
