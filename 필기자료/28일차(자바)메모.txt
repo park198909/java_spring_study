@@ -1,0 +1,87 @@
+컬렉션 프레임워크
+java.util.*;
+1. Arrays
+	.asList()
+	.deepEquals()
+	.deepToString()
+	.sort()
+	.fill()
+	.mismatch()
+	
+2. Collections
+	.addAll()
+	.checkedList()
+	.max()
+	.min()
+	.rotate()
+	.frequency()
+	.indexOfSubList()
+	.singletonList()
+	.swap()
+	
+API(Application Programing Interfate)
+	- 어플리케이션을 만드는데 필요한 인터페이스들이 있는 라이브러리
+
+-----------------------------------------------------------------------------------------------
+
+람다식(Lamda expression)
+1. 람다식이란?
+- 메서드를 하나의 식으로 표현
+- "함수형 프로그래밍"을 위해 개발
+	1) 함수는 단일기능 : 특정상황에 제한적으로 적용된다.
+	2) 함수는 값!!! : 함수를 매개변수, 반환값으로 사용가능
+		
+- 자바는 함수가 실행문 -> 절대로 값으로 사용 불가
+- 인터페이스가 객체가 되는 조건 -> 지역내부에 구현,변수로 사용,
+												생성자로 객체를 만들고 구현부를 정의해 사용
+
+- 자바의 람다식 == 자바스크립트 화살표함수
+
+2. 람다식 문법 살펴보기
+
+3. 람다식 사용하기
+
+4. 함수형 인터페이스(@FunctionalInterface)
+- 함수형 인터페이스의 형식을 체크하는 에노테이션
+- 단일기능 인지 체크 -> 하나의 추상메서드만 정의되야 오류없음
+
+-----------------------------------------------------------------------------------------------
+
+java.util.function패키지
+1. 주요 함수형 인터페이스
+	(인터페이스 클래스 - 인터페이스 메서드)
+	1) 반환값이 있고, 매개변수가 없는 형태
+	Supplier<R> - R get();
+
+	2) 반환값이 없고, 매개변수가 1개인 형태
+	Consumer<T> - void accept(T t);
+
+	3) 반환값이 있고, 매개변수가 1개인 형태
+	Function<T,R> - R apply(T t);
+
+	4) 반환값이 Boolean, 매개변수가 1개인 형태
+	Predicate<T> - boolean test(T t);
+
+	5) 반환값,매개변수1개가 모두 같은 형태
+	UnaryOperator<T> = Function<T,T> - T apply<T t, U u>
+
+	6)매개변수가 2개면 Bi+클래스명
+		6-1) BiConsumer<T,U> - void accept(T t, U u);
+		6-2) BiFunction<T,R> - R apply(T t, U u);
+		6-3) Predicate<T> - boolean test(T t, U u);
+		6-4) BinaryOperator<T> = BiFunction<T,T,T> - T apply(T t, U u);
+		
+2. 기본형 사용 함수형 인터페이스
+
+3. Function의 합성
+	- 함수를 합쳐 새로운 함수를 생성	
+	2.compose(1) 	-> 1에 2를 더함
+	1.andThen(2) 	-> 1에 2를 더함
+	.identity()		-> 동일한 함수를 반환(항등함수) : 매개변수=반환값
+	
+4. Predicate의 결합
+	- boolean과 boolean을 논리연산하는 결합
+	.and()
+	.or()
+	.negate()
+	
