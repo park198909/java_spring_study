@@ -45,6 +45,9 @@ API(Application Programing Interfate)
 - 함수형 인터페이스의 형식을 체크하는 에노테이션
 - 단일기능 인지 체크 -> 하나의 추상메서드만 정의되야 오류없음
 
+5. 메서드 참조(::)
+메서드가 저장된 클래스의 객체명::사용할메서드;
+
 -----------------------------------------------------------------------------------------------
 
 java.util.function패키지
@@ -72,10 +75,13 @@ java.util.function패키지
 		6-4) BinaryOperator<T> = BiFunction<T,T,T> - T apply(T t, U u);
 		
 2. 기본형 사용 함수형 인터페이스
-
+	- 기본형이 정해져 있는 인터페이스
+		- IntFunction : 입력값이 Int로 고정
+		- LongToDoubleFunction : 입력값이 Long 반환값이 Double
+		
 3. Function의 합성
 	- 함수를 합쳐 새로운 함수를 생성	
-	2.compose(1) 	-> 1에 2를 더함
+	1.compose(2) 	-> 2에 1을 더함
 	1.andThen(2) 	-> 1에 2를 더함
 	.identity()		-> 동일한 함수를 반환(항등함수) : 매개변수=반환값
 	
