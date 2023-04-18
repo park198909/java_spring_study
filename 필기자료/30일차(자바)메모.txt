@@ -1,0 +1,84 @@
+스트림 : 처리의 통일성, 원본데이터의 보존,  일회성, 내부반복
+중간 연산
+1. 스트림 요소 걸러내기
+- filter() 
+- distinct()
+- skip(숫자) : 숫자만큼 데이터 건너뛰기 
+
+2. 정렬 - sort()
+
+3. 변환 - map()
+
+4. 조회 - peek() : 중간에 값을 확인
+
+5. mapToInt(), mapToLong(), mapToDouble()
+- 기본형 스트림은 숫자를 다루는 메서드를 제공
+- IntStream 
+- LongStream
+- DoubleStream
+- IntSummaryStatistics : 통계용 함수가 있는 스트림
+	- getAverage();
+    - getSum();
+    - getCount();
+    - getMax();
+    - getMin();
+
+6. Optional
+- Wrapper 클래스(기본자료형의 객체생성이 목적)의 일종
+- 다양한 null 값 처리가 목적 : null관련 예외처리 메서드가 존재
+	class Optional<T>{
+		...
+		private final T value;
+		...
+	}
+- of(T t) : 요소가 없거나 null이면 예외발생
+- ofNullable(T t) : 요소가 null이어도 Optional객체 생성
+- get() : 조회/ 없으면(null) : NoSuchElementException발생
+- orElse(기본값) : 없으면 기본값으로 대체
+- orElseThrow() : NoSuchElementException발생
+- orElseThrow(supplier...)
+- isPresent(T other) : 입력값이 있으면 입력값 반환, 없으면 other반환 
+- isEmpty() : 입력값이 없으면 true 반환, 있으면 false반환 
+
+- 기본형을 처리하는 클래스가 존재 : 언박싱,오토박싱이 발생 안해서 효율적임
+	- OptionalInt
+	- OptionalDouble
+	- OptionalLong
+
+최종 연산
+- forEach()
+- toArray()
+
+- allMatch() : 모든 요소가 동일한지 체크
+- anyMatch() : 하나의 요소라도 동일한지 체크
+- noneMatch() : 모든 요소가 다른지 체크
+
+- findFirst() : 해당되는 요소 중 가장 처음 요소 반환
+- findAny() : 해당되는 요소 중 1개 반환
+
+- count()
+- sum()
+- average()
+- max()
+- min()
+
+- reduce(초기값, 메서드) : 초기값을 메서드의 매개변수1에 입력하고
+									이후 range내의 값들을 매개변수2에 넣으면서 연산을 누적한다.
+									누적된 연산의 결과값을 반환한다.
+									(초기값이 없으면 매개변수1에 range의 시작값을 초기값으로 한다.)
+									
+- collect() : 데이터 수집기능(필요한 데이터만 모아 배열로 반환) 
+- java.util.stream.Collectors에 포함되어 있다.
+	- toList(), toSet(), toMap(Funtion keyMapper, Funtion valueMapper), toColletion(Supplier...)
+	- joining("문자열") : 데이터를 모아서 이어붙이는 기능, "문자열"로 구분 가능
+	
+- groupingBy() : 그룹화 : 값에 따라서 Map
+- partitioningBy() : 분할화 : 2개로 분할(true,false)
+
+
+
+
+
+
+
+
