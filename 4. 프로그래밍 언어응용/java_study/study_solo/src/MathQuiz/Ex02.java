@@ -14,7 +14,5 @@ public class Ex02 {
         System.out.println("sin " + (float) s);
         System.out.println("cos " + (float) c);
         System.out.println("tan " + (float) t);
-//        출처:[java] Math 클래스(수학함수)(rad,sin,cos,tan,random)
-
     }
 }
