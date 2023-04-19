@@ -1,0 +1,20 @@
+바이트 스트림	
+	기반스트림 InputStream, OutputStream
+		입력스트림 
+			ByteArrayInputStream, FilleInputstream
+		출력스트림 
+			ByteArrayOutputStream, FileOutputStream
+	보조스트림	filerInputStream,filerOutputStream, ObjectInputStream,ObjectOutputStream
+		입력스트림 
+			BufferedInputStream, DataInputStream
+		출력스트림 
+			BufferedOutputStream, DataOutputStream
+문자 스트림 
+	기반스트림 reader,writer
+		입력스트림 
+			CharArrayReader, StringReader, FileReader
+		출력스트림 
+			CharArrayWriter, StringWriter, FileWriter
+	보조스트림
+		입력스트림 FilterReader, BufferedReader
+		출력스트림 FilterWriter, BufferedWriter
