@@ -31,8 +31,6 @@
 	- skip() : 입력한 숫자만큼 데이터 건너뛰기 
 	- peek() : 값을 확인하는 메서드 구현(연산중간 값 확인용)
 	
-	
-	
 - 최종연산 : 반환값이 stream이 아닌 메서드로 메서드체이닝을 
 끝내고 결과를 반환하는 메서드이다.
 	- allMatch() : 모든 요소가 동일한지 체크
@@ -51,7 +49,6 @@
 	- toMap(Funtion keyMapper, Funtion valueMapper)
 		: 스트림을 Map형태로 변환하여 반환
 	- toArray() : 스트림을 배열로 변환하여 반환
-
 	- Optional클래스 기능 : Wrapper클래스로 주로 Null처리가 목적 
 		- of(T t) : 요소가 없거나 null이면 예외발생
 		- ofNullable(T t) : 요소가 null이어도 Optional객체 생성
@@ -64,3 +61,9 @@
 	- OptionalInt : int형의 Wrapper클래스 생성 -> 오토박싱,언박싱 발생X,효율적
 	- OptionalDouble : double형의 Wrapper클래스 생성- > 오토박싱,언박싱 발생X,효율적
 	- OptionalLong : long형의 Wrapper클래스 생성 -> 오토박싱,언박싱 발생X,효율적
+	- reduce() : 초기값을 메서드의 매개변수1에 입력하고 이후 range내의 값들을 
+					매개변수2에 넣으면서 연산을 누적한다. 누적된 연산의 결과값을 반환한다.
+					(초기값이 없으면 매개변수1에 range의 시작값을 초기값으로 한다.)
+	- collect() : 필요한 데이터만 따로 모으는 기능
+	- groupingBy() : 그룹화 -> 값에 따라서 Map
+	- partitioningBy() : 분할화 -> 2개로 분할(true,false)
