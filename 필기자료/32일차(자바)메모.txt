@@ -1,0 +1,21 @@
+I/O패키지
+
+표준입출력
+1.  System.in
+2. System.out
+3. System.err
+
+File
+
+직렬화(Serialization)
+1. ObjectInputStream
+2. ObjectOutputStream
+3. 직렬화가 가능한 클래스 만들기
+	- Serializable
+	- transient
+4. 직렬화 가능한 클래스의 버전관리
+
+
+
+
+
