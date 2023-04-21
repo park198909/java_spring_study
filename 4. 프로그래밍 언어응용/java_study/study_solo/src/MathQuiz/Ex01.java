@@ -14,14 +14,14 @@ public class Ex01 {
         TestSum ts = new TestSum();
 
         System.out.println();
-        ts.isPNo(a,b);
+        ts.isPNo(a,b);      // 소수
         System.out.println();
-        ts.isGCD(a,b);
+        ts.isGCD(a,b);      // 공약수
         System.out.println();
-        ts.isLCM(a,b);
+        ts.isLCM(a,b);      // 공배수
         System.out.println();
-        ts.isTan(a,b);
+        ts.isTan(a,b);      // 탄젠트 함수
         System.out.println();
-        ts.gugudan();
+        ts.gugudan();       // 구구단
     }
 }
