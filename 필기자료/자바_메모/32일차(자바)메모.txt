@@ -123,7 +123,7 @@ TemporalAdjustor
 1. LocalDate : 날짜
 2. LocalTime
 3. LocalDateTime
-4. ZoneDateTime
+4. ZonedDateTime
 5. OffsetDateTime
 6. Period 와 duration
 

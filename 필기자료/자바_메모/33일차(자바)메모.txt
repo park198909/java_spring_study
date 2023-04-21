@@ -1,0 +1,79 @@
+java.time 패키지(JDK 1.8)
+
+java.time.temporal 패키지
+	인터페이스
+	TemporalField
+		Enum ChronoField
+	TemporalUnit 
+		Enum ChronoUnit
+
+java.time : 핵심클래스
+Temporal
+TemporalAccessor : 날짜 시간 조회
+TemporalAdjustor : 날짜 시간 변경
+	LocalDate : 날짜와 관련된 기능
+		- 조회
+		- LocalDateTime atTime(LocalTime time)
+			- LocalDate에 LocalTime을 더하면 LocalDateTime
+			
+	LocalTime : 시간과 관련된 기능
+		- LocalDateTime atDate(LocalDate date)
+			- LocalTime에 LocalDate을 더하면 LocalDateTime
+			
+	LocalDateTime : LocalDate + LocalTime
+		- toLocalDate() : LocalDate로 형변환
+		- toLocalTime() : LocalTime로 형변환
+		
+	ZonedDateTime : LocalDateTime + 시간대(ZoneId)
+		- ZoneId : 서머타임제 반영된 값
+		- LocalDateTime atZone(ZoneId zoneId)
+			- LocalDateTime에 ZoneId 더하면 ZonedDateTime
+			
+	OffsetDateTime : LocalDateTime + 시간대(ZoneOffset)
+		- ZoneOffset : 물리적 시간대를 적용(보다 정확한 시간)
+		- LocalDateTime atOffset(ZoneOffset offset)
+			- LocalDateTime에 ZoneOffset 더하면 OffsetDateTime
+
+
+java.time 객체 생성하기
+	static now() : 현재 날짜 반환
+	static of(날짜,시간) : 입력한 날짜 반환
+
+날짜 시간 조회
+	int get(TemporalField field)
+		field = ChronoField.Enum상수
+	int getXXX() : 년 월 일 등을 바로 얻을 수 있다.
+	int getDayOfWeek() : 요일을 1(월)~7(일)로 반환
+
+필드의 값 변경하기
+	with() : 날짜와 시간 변경
+		withXXX()...
+	plus() : 날짜와 시간 추가
+		plusXXX()...
+	minus() : 날짜와 시간 감소
+		minusXXX()...
+	- 새로운 객체를 만들어 반환하므로 새로운 객체로 받아야 한다.
+	참고) Calendar클래스에서는 원래 시간이 변경된다.(불변성 유지X)
+
+
+날짜 시간 비교하기
+	isAfter(), isBefore(), isEqual()
+	CompareTo	
+		isAfter()
+		isBefore()
+		isEqual()
+	
+	
+Period, Duration 클래스
+인터페이스
+Temporal
+TemporalAmount
+	Period  : 날짜의 기간(년,월,일)
+		Period between(LocalDate, LocalDate) 
+	Duration : 시간의 기간(sec, nanosec)
+	
+
+Instant
+	- Epoch Time을 다루기위한 클래스
+		- Timestamp
+		- 1970.1.1자정(GMT)부터 1/1000초 단위로 현재까지 카운팅한 수치
