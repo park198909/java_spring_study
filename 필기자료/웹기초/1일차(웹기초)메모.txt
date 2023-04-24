@@ -73,16 +73,7 @@
 				- tomcat server : tomcat9폴더 선택
 				- deployment directory 를 webapp폴더로 지정
 				- 서버포트 3000번 설정(기본 8080)
-		- 의존성 설정
-			<build>
-				<plugins>
-				  <plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0</version>
-				  </plugin>
-				</plugins>
-			  </build>
+		
 
 ------------------------------------목차 구분선---------------------------------------------- 
 	
