@@ -15,7 +15,7 @@
 				ByteArrayInputStream(메모리), FilleInputstream(파일)
 			출력스트림 
 				ByteArrayOutputStream(메모리), FileOutputStream(파일)
-		보조스트림	(파일)(filerInputStream,filerOutputStream), 
+		보조스트림	(파일)(filterInputStream,filterOutputStream), 
 						(객체)(ObjectInputStream,ObjectOutputStream)
 			입력스트림 
 				BufferedInputStream(버퍼기능), DataInputStream(기본자료형)
@@ -28,5 +28,9 @@
 			출력스트림 
 				CharArrayWriter(단일문자), StringWriter, FileWriter
 		보조스트림
-			입력스트림 FilterReader, BufferedReader
-			출력스트림 FilterWriter, BufferedWriter
+			입력스트림 FilterReader(필터), BufferedReader(버퍼기능)
+			출력스트림 FilterWriter(필터), BufferedWriter(버퍼기능)
+			
+	- 바이트 단위 스트림 -> 문자 단위 스트림
+		- InputStreamReader(InputStream in)
+		- OutputStreamWriter(OutputStream out)

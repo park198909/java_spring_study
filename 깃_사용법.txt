@@ -43,6 +43,7 @@
 
 7. 로컬 레포지터리를 원격 레포지토리에 연결
 	git remote add origin 원격 레포지터리 주소 - 원격 레포지토리에 연결
+	git remote set-url origin 원격 레포지터리 주소 - 원격 레포지토리 연결주소 변경
 
 8. 로컬 레포지터리 상태를 원격 레포지터리에 반영
 	git push origin 원격브랜치 - 원격 레포지터리에 저장

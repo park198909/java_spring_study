@@ -81,8 +81,8 @@ I/O패키지
 				- void newLine(); // 줄개행 추가
 			
 2-4. 바이트 단위 스트림 -> 문자 단위 스트림
-	1) InputStreamReader
-	2) OutputStreamWriter
+	1) InputStreamReader(InputStream in)
+	2) OutputStreamWriter(OutputStream out)
 
 2-5. 표준 입출력(Standard I/O)
 	1) System
