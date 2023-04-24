@@ -35,7 +35,7 @@
 					test : 테스트만 포함
 			- 메이븐은 의존성을 중앙에서 통제
 			- 의존모듈이 의존하는 모듈은 재귀적으로 자동설치된다.
-				- junit -> org.hamcrest			
+				- junit -> org.hamcrest
 		- mvn 실행 명령
 			- 컴파일 : mvn compile : .java -> .class
 					- target폴더생성
@@ -73,6 +73,16 @@
 				- tomcat server : tomcat9폴더 선택
 				- deployment directory 를 webapp폴더로 지정
 				- 서버포트 3000번 설정(기본 8080)
+		- 의존성 설정
+			<build>
+				<plugins>
+				  <plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0</version>
+				  </plugin>
+				</plugins>
+			  </build>
 
 ------------------------------------목차 구분선---------------------------------------------- 
 	
@@ -141,5 +151,6 @@ TDD(Test-driven Development) : 테스트 주도 개발
 					- DTO(Data Transfer Object)
 					- VO(Value Object)
 					- 일반적으로 변수, getter, setter만 존재
+				
 				
 		
