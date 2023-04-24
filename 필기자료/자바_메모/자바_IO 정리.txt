@@ -1,0 +1,32 @@
+자바 I/O
+
+1. 입출력이란?
+	- 자바에서 외부의 입력장치로부터 입력을 받고, 출력장치로 신호를 보내는 기능
+
+2. 스트림(Stream)이란?
+	- 자바 프로그램과 외부 입출력 장치 간의 연결을 스트림이라고 한다.
+	- 스트림은 입력과 출력을 한번에 하지 못한다.(단방향성)
+	- 입력스트림과 출력스트림이 따로 존재한다.
+
+3. 스트림의 구성
+	- 바이트 스트림	
+		기반스트림 InputStream, OutputStream : 모든 바이트기반 스트림의 상위클래스
+			입력스트림 
+				ByteArrayInputStream(메모리), FilleInputstream(파일)
+			출력스트림 
+				ByteArrayOutputStream(메모리), FileOutputStream(파일)
+		보조스트림	(파일)(filerInputStream,filerOutputStream), 
+						(객체)(ObjectInputStream,ObjectOutputStream)
+			입력스트림 
+				BufferedInputStream(버퍼기능), DataInputStream(기본자료형)
+			출력스트림 
+				BufferedOutputStream(버퍼기능), DataOutputStream(기본자료형)
+	- 문자 스트림 
+		기반스트림 reader,writer
+			입력스트림 
+				CharArrayReader(단일문자), StringReader(문자열), FileReader
+			출력스트림 
+				CharArrayWriter(단일문자), StringWriter, FileWriter
+		보조스트림
+			입력스트림 FilterReader, BufferedReader
+			출력스트림 FilterWriter, BufferedWriter

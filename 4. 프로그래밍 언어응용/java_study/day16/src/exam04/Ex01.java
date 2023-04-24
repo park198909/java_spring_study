@@ -3,6 +3,7 @@ package exam04;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 
 public class Ex01 {
     public static void main(String[] args) {
@@ -16,5 +17,6 @@ public class Ex01 {
         }catch(IOException e){
             e.printStackTrace();
         }
+
     }
 }
