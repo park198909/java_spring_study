@@ -1,0 +1,96 @@
+북마크
+https://javaee.github.io/javaee-spec/javadocs/overview-summary.html
+https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1
+https://developer.mozilla.org/ko/
+https://docs.oracle.com/en/java/javase/20/docs/api/index.html
+https://docs.spring.io/spring-security/site/docs/current/api/
+https://jakarta.ee/specifications/platform/10/apidocs/
+https://docs.spring.io/spring-data/commons/docs/current/api/index.html
+
+개발환경 설정
+	- Maven Project
+		- 빌드 도구
+		- 의존성 관리 도구
+		- 환경 변수 설정
+			- (1)C:\Users\Administrator\Desktop\박영근\apache-maven-3.8.8\bin
+			- (2)%JAVA_HOME%\bin
+			- 시스템 환경 변수 -> path -> (1),(2) 입력
+			- 시스템 환경 변수 -> JAVA_HOME -> C:\Program Files\Java\jdk-11 입력
+		- 프로젝트 생성(cmd창)
+			- mvn archetype:generate
+				- groupId : 소속 그룹, 회사 - 도메인방식을 거꾸로 입력(org.회사명...)
+				- artifactId : 프로젝트명
+				- package : groupId와 동일하게 설정
+		- porm.xml 설정
+			<properties>
+				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+				<maven.compiler.source>20</maven.compiler.source>	 <!-- 컴파일 버전-->
+				<maven.compiler.target>20</maven.compiler.target> <!-- 배포 시 버전-->
+			</properties>	<!-- 배포버전 : *.jar 또는 *.war -->
+			<dependencies>	<!-- 의존성 설정 -->
+				<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>test</scope>	<!--  -->
+				</dependency>
+			</dependencies>
+				- scope 입력값
+					compile	: 기본값(모두 포함-컴파일,배포,실행)
+					runtime : 컴파일 미포함, 실행 포함
+					provided : 컴파일 포함, 배포 미포함
+					test : 테스트만 포함
+			- 메이븐은 의존성을 중앙에서 통제
+			- 의존모듈이 의존하는 모듈은 재귀적으로 자동설치된다.
+				- junit -> org.hamcrest
+		- mvn 실행 명령
+			- 컴파일 : mvn compile : .java -> .class
+					- target폴더생성
+				- 기존 컴파일된 class파일 삭제X, 일괄 컴파일class
+				- 기존 컴팡일된 class파일과 충돌
+			- 컴파일 제거 : mvn clean 
+				- target폴더 제거
+			- 제거 후 컴파일 : mvn clean compile
+			- 배포파일생성 : mvn package
+				- *.jar파일을 target폴더에 생성
+				- mvn test진행 후 실행
+			- 테스트 수행 : mvn test
+				- src/test/java 전체 테스트 케이스를 실행
+		- 저장위치 별 기능	
+			- src/main/java : 개발 중 코드 - 클래스패스 
+			- src/test/java : 테스트용 코드 - 클래스패스 
+				- 클래스패스 : .class를 자동 인식하는 경로 
+			- src/main/resources : 정적자원(설정파일- properties, xml) 및 클래스패스 저장
+			- target : 클래스패스 : 컴파일소스, 배포, 자동 생성 클래스 저장
+			- src/main/webapp
+				- src/main/webapp/META-INF
+				- src/main/webapp/WEB-INF
+		- 기본 설정
+			- src에 new디렉토리 생성(java,test)
+			- main에 new디렉토리 생성(webapp)
+				- webapp에 new디렉토리 생성(META-INF, WEB-INF)
+				
+			
+	- Tomcat9
+		- settings -> plugins -> smart tomcat 검색 및 설치
+		- 브라우저 -> tomcat9 검색 및 다운로드(apache-tomcat-9.0.74)
+		- 압축해제 후 폴더를 mvn이 있는 위치에 붙여넣기
+		- 서버 설정
+			- RUN -> edit configuration -> add new -> smart tomcat
+				- tomcat server : tomcat9폴더 선택
+				- deployment directory 를 webapp폴더로 지정
+				- context path를 지정 : /day01		<!-- 접근url이름 -->
+				- 서버포트 3000번 설정(기본 8080)
+	
+	- Mockito
+		- mvn repository 방문 -> Mockito Core검색 -> Mockito Core 5.3.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+	
+	- java servlet api
+		- mvn repository 방문 -> servlet-api검색 -> Java Servlet API » 4.0.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+		
+	- mockito-junit-jupiter
+		- mvn repository 방문 -> mockito junit jupitor검색 ->mockito junit jupitor » 5.3.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+	

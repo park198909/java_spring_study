@@ -1,0 +1,149 @@
+웹기초
+
+에노테이션
+@ExtendWith(MockitoExtension.class) : 모의객체 테스트 클래스로 지정
+	@Mock : 모의객체 자동 생성
+
+Mockito 기초 사용법
+	의존성 설정
+	- mvn repository 방문 -> Mockito Core검색 -> Mockito Core 5.3.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+	- mvn repository 방문 -> servlet-api검색 -> Java Servlet API » 4.0.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+	모의 객체 생성
+		가짜객체 .mock(특정상황에만 생성가능한 객체)
+		- 특정상황에만 생성가능한 객체를 모의로 생성한다.
+			HttpSession session = mock(HttpSession.class);  // HttpSession의 모의객체 생성
+	스텁 설정
+		given(...)	- 특정 메서드에 어떤 값(...)이 주어지면
+			.willReturn(...) - ...을 반환한다. 
+			.willThrow(Throwable) - 예외를 발생 시킨다.
+				
+		- 특정 메서드 -> 예외
+	로그인한 경우 (아이디명)님 로그인 ... 메서드
+	
+mockito-junit-jupiter
+	- mvn repository 방문 -> mockito junit jupitor검색 ->mockito junit jupitor » 5.3.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+		
+-----------------------------------------------------------------------------------------------
+
+요청과 응답
+	
+HTTP - 프로토콜
+	(HyperText Transfer Protocol)
+	
+헤더(header)
+
+HTTP 요청 / 응답
+	요청 전문
+		- 헤더(header)
+			- 요청 브라우저의 대한 정보
+			- 요청 URL
+			- 요청 방식(GET, POST)
+			- 요청 브라우저 언어 설정
+			- IP
+			- 브라우저 정보(user agent ...)
+			- 쿠키(Cookie)
+			
+		- 바디(body)
+			- POST방식으로 작성된 데이터
+		
+	응답 전문
+		- 헤더(header)
+			- 응답 Boby에 대한 정보
+			- content-type정보
+				- content-type : text/html이면 body데이터를 html로 인식하여 DOM객체 변환
+			- 응답 상태 코드
+				2xx
+					200 : 정상
+					201 : 작성됨(게시글 작성 시, 회원가입 시)
+				3xx
+					301,302 : 페이지 이동됨
+					304 : 캐시됨(브라우저에 이미 저장된 자료를 사용했음)
+				4xx - 요청시 오류(클라이언트 오류)
+					400 : Bad Request - 잘못된 요청
+					401 : Unauthorized - 권한 없음 
+					403 : forbidden - 페이지 접근 제한
+					404 : Not Found - 페이지 없음
+					405 : Not Allowed Method - 요청 메서드에 오류발생
+				5xx - 응답시 오류(서버 쪽의 문제)
+					500 : Internal Server Error - 서버 문제, 코드 상의 문제 발생
+					503 : Service Unavailable - 임시로 서비스 중단됨(유지보수의 시간)
+			- 브라우저가 할 행동을 정의(명령)
+				location: 주소 --> 브라우저의 주소창에 주소를 입력하여 이동시킴
+				refresh: 숫자 --> 숫자 초마다 새로고침
+				set-cookie: --> 브라우저 쿠키 등록
+				content-disposition: ...attachment...
+					-->body데이터를 화면에 출력X, 파일로 출력하고 다운로드
+					
+		- 바디(body)
+			- 서버 응답 데이터(HTML, TEXT, 이미지 등등...)
+			
+HTTP 상태 코드
+HTTP 요청 메서드
+	GET방식
+		GET : 서버의 자원을 조회할 때
+			쿼리스트링 : ? 키=값&키=값&키=값 : 서버에서 조회를 위해 사용하는 데이터
+		DELETE : 데이터를 삭제할 때
+	
+	POST방식
+		POST : 데이터를 작성할 때
+			작성한 데이터는 요청바디(body)에 저장됨
+			요청헤더(header)에는 content-type이 저장됨
+				content-type : 요청바디의 데이터형태를 알려주는 용도
+					application/x-www-form-urlencoded --> 요청바디가 form형태
+					application.json  --> 요청바디가 JSON형태
+		PUT : 데이터를 전체 수정을 할 때
+		PATCH : 데이터를 부분 수정을 할때
+	
+-----------------------------------------------------------------------------------------------
+
+서블릿(Servlet) : 자바의 웹기술
+
+서블릿의 개요
+	HttpServlet 클래스 : 추상클래스
+	
+서블릿 클래스 작성
+	javax.servlet-api : 서블릿 API
+	javax.servlet.jsp-api : JSP API
+
+	HttpServlet 클래스를 상속한다.
+	
+	API(Application Programming Interface) : 애플리케이션 개발용 설계틀
+		JDBC API(Java DataBase Connectivity API) : 서버 쪽 API
+		SLF4J API
+		Logback Classic 	
+
+	Java Servlet API - Line11 참조
+
+web.xml 파일에 서블릿(Servlet) 등록하기
+	<?xml version="1.0" encoding="utf-8" ?>
+	
+	/src/main.webapp/WEB-INF/web.xml 생성
+	
+	서블릿 서버 설정
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+						  http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+			 version="4.0"
+			 metadata-complete="true">
+		<servlet>
+			<servlet-name>helloServlet</servlet-name>
+			<servlet-class>servlets.HelloServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>helloServlet</servlet-name>
+			<url-pattern>/hello</url-pattern>
+		</servlet-mapping>
+	</web-app>
+	
+	/hello -> helloServlet - >servlets.HelloServlet -> doget
+
+HttpServlet
+	HttpServletRequest - 요청 객체
+	HttpServletResponse - 응답 객체
+	
+	
