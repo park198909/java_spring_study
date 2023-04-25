@@ -69,9 +69,10 @@
 		- 브라우저 -> tomcat9 검색 및 다운로드(apache-tomcat-9.0.74)
 		- 압축해제 후 폴더를 mvn이 있는 위치에 붙여넣기
 		- 서버 설정
-			- compile configuration -> add new -> smart tomcat
+			- RUN -> edit configuration -> add new -> smart tomcat
 				- tomcat server : tomcat9폴더 선택
 				- deployment directory 를 webapp폴더로 지정
+				- context path를 지정 : /day01		<!-- 접근url이름 -->
 				- 서버포트 3000번 설정(기본 8080)
 		
 

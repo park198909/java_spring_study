@@ -34,3 +34,47 @@
 	- 바이트 단위 스트림 -> 문자 단위 스트림
 		- InputStreamReader(InputStream in)
 		- OutputStreamWriter(OutputStream out)
+		
+4. 스트림의 사용방법
+	- 기반 스트림 : 생성자 메서드로 사용
+	try(FilleInputstream fis= new FilleInputstream();
+		FileOutputStream fos= new FileOutputStream())
+		{
+			fis.read();
+			fos.write();
+	}catch(IOException e){
+		e.PrintStackTrace();
+	}		
+	- 보조 스트림 : 기반스트림 생성하여 보조스트림의 매개변수로 입력하여 사용
+	try(FilleInputstream fis= new FilleInputstream();
+		DataInputStream bis= new DataInputStream(fis))
+	{
+		bis.readInt();
+		bis.readLine();
+	}catch(IOException e){
+		e.PrintStackTrace();
+	}		
+
+5. 바이트단위 스트림 -> 문자단위 스트림
+	- 바이트단위 스트림을 매개변수로 입력하여 변환
+	- InputStreamReader(InputStream in)
+	- OutputStreamWriter(OutputStream out)
+	
+6. 표준 입출력
+	- System : 핵심 상위클래스
+		.in() : InputStream을 반환
+			- 콘솔터미널을 읽기
+		.out() : PrintStream을 반환
+			- 문자단위 스트림을 출력
+		.err() : PrintStream을 반환
+			- 문자단위 스트림을 출력(문자가 붉은색)
+	- PrintStream 클래스
+		.print() : 값을 콘솔터미널에 출력
+		.println() : print() + \n
+		.printf() : 값에 형식화(Format)를 사용하여 출력
+			%d : 정수
+			%s : 문자열
+			%n : 줄개행
+			%c	 : 단일문자 
+			%f  : 실수
+		.setErr() : 스트림의 오류상태를 true로 설정
