@@ -1,0 +1,110 @@
+웹기초
+
+서블릿
+	- 자바의 웹기술
+
+서블릿 클래스 작성하기
+	javax.servlet-api
+	javax.servlet.jsp-api
+	javax.servlet.http패키지
+		HttpServlet을 상속하면 서블릿 클래스가 된다.
+			.doGet()
+			.doPost()
+			.doDelete()
+			.doPut()
+				- 매개변수
+					HttpServletRequest 인터페이스 : 요청
+						- 요청에 대한 정보확인 메서드가 정의됨
+						- 요청데이터 확인 메서드가 정의됨
+							getXXX...형태의 메서드가 많음
+						- 주요 메서드
+							String getParameter(String name)
+							String[] getParameterValues(...)
+						
+					HttpServletResponse 인터페이스 : 응답
+						- 응답 상태(코드) , 응답 데이터의 종류를 정의하는 메서드가 정의됨
+							getStatus()
+							sendError()
+						- 출력관련 메서드가 정의됨
+							ServletOuputStream
+							PrintWriter
+							addXXX..., setXXX... 형태의 메서드가 많음
+						
+						
+				- 컨트롤러(Controller) : 요청과 응답의 중재자
+				/hello -> web.xml -> HelloServlet.class -> 객체 생성 -> doget()호출
+			
+웹 브라우저로부터 데이터 입력 받기
+	@WebServlet("주소") : web.xml설정을 대체하는 에너테이션
+	
+	서블릿의 생명주기
+		웹서버 실행 -> 서블릿 객체 생성 -> init() 실행(최초 1번) -> 요청처리 메서드 -> destroy() 실행(최후 1번)
+		
+	HttpServlet
+		.init() : 서버가 실행되는 최초 한번 실행
+		.init(ServletConfig config)
+			: getInitParameter(String name)
+		
+
+
+필터와 래퍼클래스
+
+필터 - 요청과 응답 사이에서 공통기능을 수행 시 사용
+	Filter 인터페이스를 구현하면 사용가능
+		.doFilter() : 추상메서드, 필터링 설정
+			filterChain.doFilter(request, response) : 다음 필터, 없으면 서블릿요청메서드 호출 
+				요청 -> 필터체인1요청 -> 필터체인2요청 -> 서블릿 메서드 요청
+				-> 필터체인2 응답 -> 필터체인1 응답 -> 응답
+	구현방법 : web.xml에 init-param설정을 통해 서버 시작과 함께 자동적용가능
+				web.xml
+					<servlet>
+						<init-param>
+							<param-name>이름</param-name>
+							<param-value>값</param-value>
+						</init-param>
+					</servlet>
+	공통기능은 래퍼클래스를 활용한 구현을 권장함
+		예시) 쿠키(cookie)는 암호화해야 하므로 기본기능으로 구현하여 사용함
+			HttpServletResponse
+				addCookie
+					-> HttpServletResponseWrapper에서 재정의 후 사용이 일반적
+			HttpServletRequest
+				getCookie
+					-> HttpServletRequestWrapper에서 재정의 후 사용이 일반적
+
+래퍼클래스
+	HttpServletRequestWrapper : HttpServletRequest의 구현클래스
+	HttpServletResponseWrapper : HttpServletResponse의 구현클래스
+
+-----------------------------------------------------------------------------------------------
+
+API(Application Programming Interface) : 프로그램 개발을 위한 설계틀
+	API 구현체 개발업체 : hibernate, ...
+	<scope>provided</scope>	// 배포시에는 없어진다.
+
+web.xml파일 설정
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+	http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+		<servlet>
+			<servlet-name>helloServlet</servlet-name>
+			<servlet-class>controllers.HelloServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>helloServlet</servlet-name>                   
+			<url-pattern>/hello</url-pattern>                           
+		</servlet-mapping>
+		
+		<filter>
+			<filter-name>...</filter-name>
+			<filter-class>...</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>...</filter-name>
+			<url-pattern>...<url-pattern>
+		</filter-mapping>
+	</web-app>
+	

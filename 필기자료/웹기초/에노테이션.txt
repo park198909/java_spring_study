@@ -24,3 +24,6 @@
 		
 	- @ExtendWith(MockitoExtension.class) : 모의객체 테스트 클래스로 지정
 	- @Mock : 모의객체 자동 생성
+	
+	- @WebServlet("주소") : web.xml설정을 대체하는 에너테이션
+		- web.xml에 meta-data=true가 있으면 사용불가하므로 false설정 또는 삭제 필요

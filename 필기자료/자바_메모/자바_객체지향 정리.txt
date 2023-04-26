@@ -105,9 +105,11 @@
 	- 하위클래스는 상위클래스를 포함하고 있다.
 
 3. 형태
-	- class 하위클래스 extends 상위클래스 {
+	- class SimpleCalculator implements Calculator {
 		
 	}
+	
+	Calculator cal = new SimpleCalculator(); // 자동형변환 - 다형성
 	
 4. super예약어
 	- super : 하위클래스에 자동생성되는 상위클래스의 객체주소를 가진 변수
@@ -119,14 +121,14 @@
 5. 메서드 오버라이딩
 	- 상위클래스와 동일한 메서드를 정의하여 사용하는 것
 	- 활용예시
-		상속관계 : B <- A  일 때,
-		class B extends A {
+		상속관계 : SimpleCalculator <- Calculator  일 때,
+		class SimpleCalculator implements Calculator {
 			@Overring //상위클래스 메서드를 재정의함을 알리는 에노테이션
-			public void A_method(){
+			public void add(){
 				// 재정의할 코드
 			}
 		}
-		- 이후 B의 생성자를 통해 재정의된 A_method()를 사용
+		- 이후 B의 생성자를 통해 재정의된 add()를 사용
 
 -------------------------------------------------------------
 
