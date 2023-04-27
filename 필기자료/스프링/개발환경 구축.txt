@@ -22,7 +22,7 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 				- artifactId : 프로젝트명
 				- package : groupId와 동일하게 설정
 		- porm.xml 설정
-			<properties>
+			<properties>		
 				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 				<maven.compiler.source>20</maven.compiler.source>	 <!-- 컴파일 버전-->
 				<maven.compiler.target>20</maven.compiler.target> <!-- 배포 시 버전-->
@@ -71,7 +71,7 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 				- webapp에 new디렉토리 생성(META-INF, WEB-INF)
 				
 			
-	- Tomcat9
+	- Tomcat9 : 서버 구축용 dependency설정
 		- settings -> plugins -> smart tomcat 검색 및 설치
 		- 브라우저 -> tomcat9 검색 및 다운로드(apache-tomcat-9.0.74)
 		- 압축해제 후 폴더를 mvn이 있는 위치에 붙여넣기
@@ -81,16 +81,24 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 				- deployment directory 를 webapp폴더로 지정
 				- context path를 지정 : /day01		<!-- 접근url이름 -->
 				- 서버포트 3000번 설정(기본 8080)
+				
+	- Junit : 자바 기본설정		
+		- mvn repository 방문 -> Junit검색 ->  junit-dep 4.11
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+
+	- Jupiter : 모의테스트(TDD)용 dependency설정1
+		- mvn repository 방문 -> Jupiter검색 -> JUnit Jupiter (Aggregator) 5.9.2
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
 	
-	- Mockito
+	- Mockito : 모의테스트(TDD)용 dependency설정2
 		- mvn repository 방문 -> Mockito Core검색 -> Mockito Core 5.3.1
 			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
-	
-	- java servlet api
-		- mvn repository 방문 -> servlet-api검색 -> Java Servlet API » 4.0.1
-			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
 		
-	- mockito-junit-jupiter
+	- mockito-junit-jupiter : 모의테스트(TDD)용 dependency설정3
 		- mvn repository 방문 -> mockito junit jupitor검색 ->mockito junit jupitor » 5.3.1
+			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+							
+	- java servlet api : 서블릿용 dependency설정
+		- mvn repository 방문 -> servlet-api검색 -> Java Servlet API » 4.0.1
 			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
 	
