@@ -1,0 +1,18 @@
+암기 목록
+
+JSP 내장객체
+	HttpServletRequest request;		- 요청 정보(헤더,바디)
+	HttpServletResponse response;	- 응답 정보(헤더,바디)
+	HttpSession session					- 사용자 식별 및 사용자 정보 저장
+	PageContext pageContext;			- 페이지 환경정보(객체생성용 getter보유)
+	ServletContext application			- 서블릿 환경정보
+	ServletConfig config					- 서블릿 설정정보
+	JspWriter out							- JSP 화면출력
+	Object page = this					- 번역된 서블릿 객체를 말한다.
+	
+index.jsp
+	출력할 주소를 명시하지 않으면 index.jsp가 자동선택된다.
+	"/주소" -> 기준 폴더는 webapp폴더를 의미한다. = "webapp/주소"
+
+EL식 : jsp에서 연산식을 구현하는 형태
+	기본형 : ${연산식}

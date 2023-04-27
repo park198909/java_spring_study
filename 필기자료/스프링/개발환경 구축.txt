@@ -71,7 +71,7 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 				- webapp에 new디렉토리 생성(META-INF, WEB-INF)
 				
 			
-	- Tomcat9 : 서버 구축용 dependency설정
+	- Tomcat9 : 서버 구축설정
 		- settings -> plugins -> smart tomcat 검색 및 설치
 		- 브라우저 -> tomcat9 검색 및 다운로드(apache-tomcat-9.0.74)
 		- 압축해제 후 폴더를 mvn이 있는 위치에 붙여넣기
@@ -101,4 +101,12 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 	- java servlet api : 서블릿용 dependency설정
 		- mvn repository 방문 -> servlet-api검색 -> Java Servlet API » 4.0.1
 			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
-	
+			
+	- java servlet.jsp-api : 서블릿용 dependency설정
+		- mvn repository 방문 -> servlet.jsp-api검색 
+		-> JavaServer Pages(TM) API » 2.3.3	-> 의존성 복사 
+		-> porm.xml <dependencies>여기붙여넣기</dependencies>
+		
+	JSP taglib 외부라이브러리 설치
+		- mvn repository 방문 -> jstl 1.2 검색 -> JJSTL » 1.2 -> 의존성 복사 
+		-> porm.xml <dependencies>여기붙여넣기</dependencies>

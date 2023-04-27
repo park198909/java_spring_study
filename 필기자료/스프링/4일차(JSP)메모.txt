@@ -1,1 +1,139 @@
 JSP
+
+JSP의 페이지 처리과정
+	xxx.jsp -> xxx_jsp.java로 변환
+		- 서블릿 번역기술 : jsp파일에 입력된 값을 서블릿이 인식하는 형태로 번역
+	
+	
+JSP 생명주기
+	xxx_jsp ->번역-> xxx_jsp.java ->컴파일-> xxx_jsp.class 
+		->로딩및초기화 : _jspInit()
+	실행 : _jspService()
+	소멸 : _jspDestroy()
+	
+	소스를 작성하는 대부분의 코드 -> _jspService() 지역 내에 존재
+	
+		
+스크립트 태그 - 자바코드를 사용할 수 있는 태그
+	스크립틀릿
+		- <%	
+				_jspService() 내에 코드 추가(지역 변수)
+				메서드 정의 불가(함수 내부)
+			%>
+	선언문
+		- <%!	
+				클래스 바로 아래 코드 추가(멤버변수,메서드 정의)
+			%>
+	표현문
+		- <%= 
+				자료형 변수명; --> _jspService() 내에 변수 추가
+			%>
+	
+	
+디렉티브 태그 <%@ ... %>
+- JSP페이지의 처리방식을 설정하는 태그	
+	
+	page
+		- 페이지에 대한 정보설정
+		- <%@ page속성=값; 속성=값 ... %>	
+		- contentType : 콘텐츠 유형 설정
+			- charset		: 문자열세트(언어타입) 설정
+			<%@ page contentType="text/html; charset=UTF-8" %>
+		- pageEncoding : 문자열세트(언어타입) 설정
+			<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+		- session
+		- import		: 필요한 java패키지를 적용
+			<%@ page import="java.util.*, java.time.*" %>
+		- buffer		: 출력버퍼 크기 수동설정
+		- autoFlush : 출력버퍼 크기 자동설정
+		- isTreadSafe  :
+		- info : 문자열 저장
+			<%@ page info="서블릿 JSP 연습" %>
+		- errorPage : 에러발생시 이동할 페이지 지정
+			<%@ page errorPage="/error/err.jsp" %>
+		- isErrorPage : errorPage가 지정한 페이지에 설정
+			-> 번역 과정에서 Exception exception = pageContext.getException();
+			<%@ page isErrorPage="true" %>
+		- isELIgnored : 페이지의 번역과정에서 EL식 호환기능을 제외
+			<%@ page isELIgnored="true"%>
+		
+	include
+	<%@ include file="포함될 파일명(jsp, txt, html ...)"%>
+		번역 시 물리적으로 소스에 통합
+		공통적인 소스에 사용 - 하지만 권장되지 않음(쓰지마!)
+		<%@ include file="head.jsp" %>
+		<h1>메인!</h1>
+		<%@ include file="tail.jsp" %>
+	
+	taglib
+	<%@ %>
+		태그형태의 라이브러리를 사용하기위한 디렉티브태그
+		기능을 가진 태그	
+		jstl (Jsp Standard Tag Library)
+			- 제어문,반복문,변수,URL처리,형식화,문자열 가공 기능
+			- core 라이브러리 : 제어구문,반복문,변수,URL...
+			- fmt 라이브러리 : 형식화(숫자,문자,통화 ...), 지역화(다국어,시간대)
+			- function 라이브러리 : 문자열 가공
+			- sql 라이브러리 : 사용하지 않음(쓰지마!)
+				- uri : 태그 라이브러리를 구분해주는 도메인방식의 유일한 값
+				- prefix : uri를 간략히 표현하는 문자를 설정
+				<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+		외부 라이브러리 - 설치필요
+			- mvn repository 방문 -> jstl 1.2 검색 -> JJSTL » 1.2 -> 의존성 복사 
+			-> porm.xml <dependencies>여기붙여넣기</dependencies>
+		
+		
+JSP 주석처리
+	<%
+		// 컴파일시 제외
+		/*
+			컴파일시 제외
+		*/
+	%>
+	<%-- 
+		번역시에 제외
+	--%>
+	
+
+액션 태그 <jsp:.../>
+- 서버나 클라이런트에게 어떤 행동을 하도록 명령하는 태그
+- 스크립트 태그, 주석, 디렉티브 태그와 함께 JSP페이지를 구성
+
+	forward
+		<jsp:forward page="페이지경로"/>
+		페이지 이동X - 페이지 내용물만 교체
+		출력버퍼의 통제 
+			-> 기존 출력버퍼를 비우고 forward경로의 출력내용으로 교체
+			
+	include
+		<jsp:include page="페이지경로"/>
+		페이지 이동X - 페이지 내용물만 교체
+		출력버퍼의 통제 
+			-> 기존 출력버퍼를 유지하고 include경로의 출력내용을 추가
+			
+	요청을 처리하는 동안 forward,include가 버퍼에 추가
+		- 요청한 데이터를 추가,조회하는 법
+			- <jsp param:>
+		- HttpServletRequest request -> getParameter()
+			
+	useBean : JSP페이지에 자바빈즈를 설정
+
+
+-----------------------------------------------------------------------------------------------
+
+_jspService()에 정의된 내장객체 - JSP페이지에서 바로 사용 가능
+	javax.servlet.http내에 정의
+		HttpServletRequest request;		- 요청 정보(헤더,바디)
+		HttpServletResponse response;	- 응답 정보(헤더,바디)
+	javax.servlet.jsp내에 정의
+		PageContext pageContext;			- 페이지 환경정보(내장객체 생성기능)
+		
+EL식
+	기본형 : ${연산식}
+
+일반적 이동방법 : 응답헤더 -> location: 경로를 변경하여 브라우저 이동
+	HttpServletResponse
+		sendRedirect(String location) -> 응답헤더에 주소를 보내 이동
+		
+버퍼의 역할 : 입력받는 값을 모아서 한번에 처리하게끔 하는 기능
+				  일정 크기가 되면 헤더를 붙여 나가므로 자원이 절약된다.

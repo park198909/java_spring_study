@@ -37,15 +37,14 @@
 웹 브라우저로부터 데이터 입력 받기
 	@WebServlet("주소") : web.xml설정을 대체하는 에너테이션
 	
-	서블릿의 생명주기
-		웹서버 실행 -> 서블릿 객체 생성 -> init() 실행(최초 1번) -> 요청처리 메서드 -> destroy() 실행(최후 1번)
+서블릿의 생명주기
+	웹서버 실행 -> 서블릿 객체 생성 -> init() 실행(최초 1번) -> 요청처리 메서드 -> destroy() 실행(최후 1번)
 		
-	HttpServlet
-		.init() : 서버가 실행되는 최초 한번 실행
-		.init(ServletConfig config)
-			: getInitParameter(String name)
+HttpServlet
+	.init() : 서버가 실행되는 최초 한번 실행
+	.init(ServletConfig config)
+		: getInitParameter(String name)
 		
-
 
 필터와 래퍼클래스
 
