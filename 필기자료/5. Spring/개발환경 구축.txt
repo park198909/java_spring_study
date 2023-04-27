@@ -97,6 +97,10 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 	- mockito-junit-jupiter : 모의테스트(TDD)용 dependency설정3
 		- mvn repository 방문 -> mockito junit jupitor검색 ->mockito junit jupitor » 5.3.1
 			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
+			
+	- surefire : 모의테스트(TDD)용 build/Plugin설정
+		- mvn repository 방문 -> surefire검색 -> Maven Surefire Plugin » 3.0.0
+			->의존성 복사 -> porm.xml <build><plugins>여기붙여넣기</plugins></build>			
 							
 	- java servlet api : 서블릿용 dependency설정
 		- mvn repository 방문 -> servlet-api검색 -> Java Servlet API » 4.0.1
