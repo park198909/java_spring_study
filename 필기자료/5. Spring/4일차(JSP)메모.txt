@@ -115,7 +115,7 @@ JSP 주석처리
 		- 요청한 데이터를 추가,조회하는 법
 			- <jsp param:>
 		- HttpServletRequest request -> getParameter()
-			
+ 
 	useBean : JSP페이지에 자바빈즈를 설정
 
 

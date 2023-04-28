@@ -1,0 +1,51 @@
+JSP
+
+액션 태그 <jsp:.../>
+- 서버나 클라이런트에게 어떤 행동을 하도록 명령하는 태그
+- 스크립트 태그, 주석, 디렉티브 태그와 함께 JSP페이지를 구성
+
+	forward
+		<jsp:forward page="페이지경로"/>
+		페이지 이동X - 페이지 내용물만 교체
+		출력버퍼의 통제 
+			-> 기존 출력버퍼를 비우고 forward경로의 출력내용으로 교체
+			
+	include
+		<jsp:include page="페이지경로"/>
+		페이지 이동X - 페이지 내용물만 교체
+		출력버퍼의 통제 
+			-> 기존 출력버퍼를 유지하고 include경로의 출력내용을 추가
+			
+	요청을 처리하는 동안 forward,include가 버퍼에 추가
+		- 요청한 데이터를 추가,조회하는 법
+			- <jsp param:>
+		- HttpServletRequest request -> getParameter()
+ 
+	useBean : JSP페이지에 자바빈즈를 설정, EL식과 함께 사용
+		Bean : 자바 객체
+		<jsp:userBean id="빈의 이름" class="패키지 포함 클래스명" scope="" />
+			-> id="이름" : 참조변수, EL식 속성(변수)
+			-> scope
+				- page(기본값)
+				- request
+				- session
+				- application
+				
+	EL식
+		${연산식}
+		EL식의 변수 : 속성(Attribute)
+		적용범위 : pageContext < request < session < application
+		우선순위 : pageContext > request > session > application
+	속성(Attribute)을 관리하는 객체 - jsp페이지 내에서 출력
+		PageContext pageContext	: 현재 페이지
+		HttpServletRequest request : 요청 처리 동안
+		HttpSession session : 개인화된 서비스 제공 기술
+		ServletContext application : 앱이 실행되는 동안
+			속성값 지정 메서드 : setAttribute(String n, Object v)
+			속성값 조회 메서드 : getAttribute(String n)
+			속성값 제거 메서드 : removeAttribute(String n)
+	EL식 속성 범위 내장 객체
+		pageScope : pageContext 범위 속성값 조회
+		requestScope : request 범위 속성값 조회
+		sessionScope : session 범위 속성값 조회
+		applicationScope : application 범위 속성값 조회

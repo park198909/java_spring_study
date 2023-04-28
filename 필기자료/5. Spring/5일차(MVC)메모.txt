@@ -1,0 +1,34 @@
+웹MVC
+	
+RequestDispatcher : java의 페이지 출력버퍼 제어기능을 가진 클래스
+	- forward : <jsp:forward>와 동일
+	- include	: <jsp:include>와 동일
+	- 사용방법
+	@WebServlet("/login")
+	public class LoginServlet extends HttpServlet {
+		@Override
+		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			RequestDispatcher rd = req.getRequestDispatcher("/user/login.jsp");
+			rd.include(req, resp);
+		}
+	}
+	
+한글깨짐 해결
+	java.net.URLEncoder - url encoding
+			   URLDecoder - url decoding
+			  
+MVC패턴 : 역할 분담 구조
+	M(Model) - 비지니스 로직 - 기능(Service): 로그인,회원가입,...
+		- 실제 기능(Service)을 수행
+		- DTO(Data Transfer Object) : 데이터 전달용 객체
+			- 멤버변수 + getter() + setter()
+		- DAO(Data Access Object) : 데이터 접근용 객체
+		- Validator.. : 데이터 검증용 객체
+		- VO(Value Object)
+		- 객체 간 협동을 통해 기능을 완성한다.(*의존성*)
+					
+	V(View) : 요청 처리 결과를 출력(jsp)
+	
+	C(Controller): 
+		- 요청 -> 적절한 요청 처리 모델 찾기 -> 모델에서 처리 -> 응답
+		- 요청을 처리할 적절한 서비스(모델)을 찾아서 응답할수 있는 뷰를 연결
