@@ -1,0 +1,35 @@
+EL식
+	EL식이란?
+		속성(Attribute)형태로 전달되는 데이터
+		속성(Attribute)값을 출력		
+		
+	기초문법
+		${연산식,속성}
+		EL식의 변수 : 속성(Attribute)
+		
+	연산자
+		기본 연산자
+			산술연산, 논리연산, 비교연산, 삼항조건연산	
+		엠프티 연산자
+		
+	속성(★X100)
+		속성(Attribute)을 관리하는 객체 - jsp페이지 내에서 출력
+			PageContext pageContext	: 현재 페이지
+			HttpServletRequest request : 요청 처리 동안
+			HttpSession session : 개인화된 서비스 제공 기술
+			ServletContext application : 앱이 실행되는 동안
+				속성값 지정 메서드 : setAttribute(String n, Object v)
+				속성값 조회 메서드 : getAttribute(String n)
+				속성값 제거 메서드 : removeAttribute(String n)	
+		적용범위 : pageContext < request < session < application
+		우선순위 : pageContext > request > session > application
+		EL식 속성 범위 내장 객체
+			pageScope : pageContext 범위 속성값 조회
+			requestScope : request 범위 속성값 조회
+			sessionScope : session 범위 속성값 조회
+			applicationScope : application 범위 속성값 조회
+			
+
+			
+	
+	

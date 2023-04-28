@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="76fbc781-aaf6-4a1d-a04b-5b4de6cfb52f" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/action2/ex03.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/action2/ex03.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/action2/include.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/action2/include.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/board/BoardViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/board/BoardViewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/board/BoardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/board/BoardData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/action2/ex08.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/action2/ex08.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/users/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +68,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/day04" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
