@@ -7,8 +7,8 @@
     <list default="true" id="76fbc781-aaf6-4a1d-a04b-5b4de6cfb52f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/개발환경 구축.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/5. Spring/개발환경 구축.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/문제만들기/자바_문제만들기(객체).txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/문제만들기/자바_문제만들기(객체).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/action/forward.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/action/forward.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/action/target.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/action/target.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/github2/5. 프로그래밍 언어활용/jsp_study/day04",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/5. 프로그래밍 언어활용/jsp_study/day04",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
@@ -59,6 +59,9 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/day04" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
@@ -69,6 +72,7 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
+      <module name="day04" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
