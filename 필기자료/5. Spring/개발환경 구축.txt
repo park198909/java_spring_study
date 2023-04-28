@@ -111,6 +111,6 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 		-> JavaServer Pages(TM) API » 2.3.3	-> 의존성 복사 
 		-> porm.xml <dependencies>여기붙여넣기</dependencies>
 		
-	JSP taglib 외부라이브러리 설치
-		- mvn repository 방문 -> jstl 1.2 검색 -> JJSTL » 1.2 -> 의존성 복사 
+	- JSP taglib 외부라이브러리 설치
+		- mvn repository 방문 -> jstl 1.2 검색 -> JSTL » 1.2 -> 의존성 복사 
 		-> porm.xml <dependencies>여기붙여넣기</dependencies>

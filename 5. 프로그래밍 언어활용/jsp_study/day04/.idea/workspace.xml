@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76fbc781-aaf6-4a1d-a04b-5b4de6cfb52f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServletStudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServletStudy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/스프링/3일차(웹기초)메모.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/스프링/3일차(웹기초)메모.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/스프링/4일차(JSP)메모.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/스프링/4일차(JSP)메모.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/스프링/개발환경 구축.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/스프링/개발환경 구축.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/개발환경 구축.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/5. Spring/개발환경 구축.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../필기자료/문제만들기/자바_문제만들기(객체).txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/문제만들기/자바_문제만들기(객체).txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +28,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2OzqaJr6TyUqVRklDxh2WF6B19V" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -59,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근/5. 프로그래밍 언어활용/jsp_study/day04/src/main/java/webapp",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/github2/5. 프로그래밍 언어활용/jsp_study/day04",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
@@ -77,9 +59,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/day04" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
@@ -90,7 +69,6 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="day04" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
