@@ -98,7 +98,7 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 		- mvn repository 방문 -> mockito junit jupitor검색 ->mockito junit jupitor » 5.3.1
 			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
 			
-	- surefire : 모의테스트(TDD)용 build/Plugin설정
+	- surefire : 모의테스트(TDD)용 build/Plugins설정
 		- mvn repository 방문 -> surefire검색 -> Maven Surefire Plugin » 3.0.0
 			->의존성 복사 -> porm.xml <build><plugins>여기붙여넣기</plugins></build>			
 							
@@ -111,6 +111,6 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 		-> JavaServer Pages(TM) API » 2.3.3	-> 의존성 복사 
 		-> porm.xml <dependencies>여기붙여넣기</dependencies>
 		
-	- JSP taglib 외부라이브러리 설치
+	- JSP taglib : JSTL용 외부라이브러리 설치
 		- mvn repository 방문 -> jstl 1.2 검색 -> JSTL » 1.2 -> 의존성 복사 
 		-> porm.xml <dependencies>여기붙여넣기</dependencies>
