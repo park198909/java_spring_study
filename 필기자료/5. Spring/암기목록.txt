@@ -6,7 +6,7 @@ JSP 내장객체
 		JspWriter out							- JSP 화면출력
 		Object page = this					- 번역된 서블릿 객체를 말한다.
 	EL식 속성관리 객체
-		PageContext pageContext;		- 페이지 환경정보(객체생성용 getter보유)
+		PageContext pageContext;			- 페이지 환경정보(객체생성용 getter보유)
 		HttpServletRequest request;		- 요청 정보(헤더,바디)
 		HttpSession session					- 사용자 식별 및 사용자 정보 저장
 		ServletContext application			- 서블릿 환경정보
@@ -25,3 +25,6 @@ EL식 : jsp에서 연산식을 구현하는 형태
 		requestScope : request 범위 속성값 조회
 		sessionScope : session 범위 속성값 조회
 		applicationScope : application 범위 속성값 조회
+		
+JSP jstl기본 입력값 
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

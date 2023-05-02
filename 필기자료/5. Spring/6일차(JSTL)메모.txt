@@ -1,0 +1,63 @@
+JSTL(JSP Standard Tag Library)
+	- 커스텀태그의 일종으로 외부라이브러리 필요 : jstl 1.2
+
+코어(core) 라이브러리 - 제어문, 반복문, 변수, ...
+	<c:set>
+		- EL식 속성값으로 추가
+		- var="변수명"
+		- value="값" -> 입력가능 : 숫자,문자,자바 변수,EL식 변수...
+		- scope="객체명" : 변수를 저장할 객체를 지정
+			- page : 기본값(pageContext)
+			- request
+			- session
+			- application
+	<c:remove>
+		- EL식 속성값 제거
+		- var="변수명"
+		- scope="범위명" : scope를 설정 안하면 전 범위의 값을 제거
+	<c:if>
+		- test="${조건식}"
+			- true,false는 바로 입력 가능
+		- else는 없다. 조건식을 반대로 해서 사용할 것		
+	<c:choose>
+		- <c:when test="${조건식}">조건식을 만족할때
+		- <c:otherwise>그 외 일때
+	<c:forEach>
+		- 반복문,배열,컬렉션(List,Set),Iterator
+		- ,로 구분한 문자열
+			- items
+				-EL변수
+		- 횟수가 정해진 반복
+		- begin="시작번호"
+		- end="종료번호"
+		- var="현재번호"
+		- step="" 기본값은 1, 증감의 단위를 지정
+		- varStatus="status"
+			.index : 0부터 시작하는 순서 번호
+			.count : 1부터 시작하는 순서 번호
+			.first : 첫번째 인지
+			.last : 마지막 인지
+			.current : 현재번호
+	<c:forTokens>
+		- StringTokenizer
+			- 문자열 분리기능
+		- items = "문자열"
+		- delims="패턴"
+		- var="패턴으로 분리된 문자열"	
+	<c:catch> 
+		- 예외처리
+	<c:redirect>
+		- HttpServletResponse
+			- sendRedirect 와 동일기능
+		- url="주소"
+		- <c:param name="", value="" /> -> GET 요청데이터 추가(쿼리스트링)
+	<c:import>
+		- <jsp:include page="..."> 와 유사한기능
+			- 차이점 : <jsp:include> -> 서버자원(jsp,서블릿,html,text)
+						  <c:import> -> 현재 서버자원 + 외부 서버자원
+		- url="경로" -> 버퍼에 추가할 자원에 대한 경로 입력
+		- var="변수명" -> 출력버퍼의 결과를 EL변수로 저장
+	<c:url>
+	<c:out>
+	
+포매팅(fmt) 라이브러리 - 형식화(날짜,숫자,지역화 - 다국어,시각)

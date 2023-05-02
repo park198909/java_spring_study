@@ -1,0 +1,60 @@
+익스프레션 언어(Expression Language) - EL표현식
+
+	EL식이란?
+		- 연산식 ${...식...}		
+		- 자바코드의 번역기술, 
+
+	JSP/서블릿 기술에서 사용되는 네 종류의 attribute(속성)
+		- 속성값을 EL식 변수명으로 사용
+		- 속성(attribute)관리 내장객체
+			- PageContext pageContext
+			- HttpServletRequest request
+			- HttpSession session
+			- ServletContext application
+		- 속성제어 메서드
+			- void setAttribute(String name, Object value)	: 추가
+			- Object getAttribute(String name) : 조회
+			- void removeAttribute(String name) : 제거
+		- EL식 변수 적용 우선순위 : 범위가 좁을수록 우선순위가 높다
+			- pageContext >	 request 		>      session 		> application
+			-      페이지    >	  요청  		>   	  세션		> 애플리케이션 실행
+			- pageScope   >requestScope >   sessionScope 	> applicationScope 
+		- EL식에서 get,set의 명칭은 생략 가능
+			- pageContext.getRequest(); -> ${pageContext.request.requestURI}
+			
+	익스프레션 언어의 내장객체
+		- cookie 이름 -> 해당 이름의 쿠키 객체를 반환
+
+	익스프레션 언어의 연산자
+		- 익스프레션 언어의 연산자
+			- 산술,비교,논리,삼항조건
+			- 논리,비교 연산자의 문장형태
+				- lt(lesser than)
+				- gt(greater than)
+				- le(lesser than equal)
+				- ge(greater than equal)
+				- eq(equal)
+				- ne(not equal)
+		
+		- 엠프티 연산자
+			- empty : 값이 null인지 아닌지 확인
+			
+		- 대괄호 연산자와 마침표 연산자
+			- EL 객체의 속성 또는 메서드로 마침표(.)
+				- 속성명이 변수명으로 사용하지 못하는 패턴이면 사용불가
+				- 이경우 대괄호 연산자[]를 통해서만 접근가능
+			- 대괄호 연산자도 사용가능
+				
+
+	
+	JSP내장 객체( _jspService()내의 존재한다. )
+		- PageContext pageContext
+		- HttpServletRequest request
+		- HttpSession session
+		- ServletContext application
+		- HttpServletResponse response
+		- ServletConfig config
+		- JspWriter out
+		- Object page == this
+		
+

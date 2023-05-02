@@ -20,8 +20,7 @@
 		- static메서드로 정의 필수
 	- @AfterAll : 메서드()의 수행 시점을 변경
 		- 최초 테스트메서드()의 수행 전 1회만 수행 
-		- static메서드로 정의 필수
-		
+		- static메서드로 정의 필수		
 	- @ExtendWith(MockitoExtension.class) : 모의객체 테스트 클래스로 지정
 	- @Mock : 모의객체 자동 생성
 	

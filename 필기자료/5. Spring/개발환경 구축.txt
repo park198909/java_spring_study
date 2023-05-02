@@ -82,10 +82,6 @@ https://docs.spring.io/spring-data/commons/docs/current/api/index.html
 				- context path를 지정 : /day01		<!-- 접근url이름 -->
 				- 서버포트 3000번 설정(기본 8080)
 				
-	- Junit : 자바 기본설정		
-		- mvn repository 방문 -> Junit검색 ->  junit-dep 4.11
-			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
-
 	- Jupiter : 모의테스트(TDD)용 dependency설정1
 		- mvn repository 방문 -> Jupiter검색 -> JUnit Jupiter (Aggregator) 5.9.2
 			->의존성 복사 -> porm.xml <dependencies>여기붙여넣기</dependencies>
