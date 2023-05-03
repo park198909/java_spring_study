@@ -1,0 +1,133 @@
+JSTL(JSP Standard Tag Library)
+	- 커스텀태그의 일종으로 외부라이브러리 필요 : jstl 1.2
+	
+코어(core) 라이브러리 - 제어문, 반복문, 변수, ...
+	<c:url>
+		- HttpServletRequest request
+			- String getContextPath(); -> 기본URL주소(/exam01)
+		- var="변수명" -> 변환된 주소값을 담는 EL식 변수
+		- value="URL값" -> ContextPath를 포함한 주소값
+		- <c:param name="키" value="값" /> -> 쿼리스트링으로 추가하는 키,값
+	<c:out>
+		- HTML을 출력할때 문자열 출력(태그가 그대로 출력됨)
+			- escape 처리
+				- 자바스크립트 해석 방지
+				- 자바스크립트는 <script>태그에서만 번역됨
+		- escapeXML="..."
+			true : 태그 문자 -> 특수 문자로 인식
+			false : 태그 그대로 해석			
+	
+포매팅(fmt) 라이브러리 - 형식화(날짜,숫자,지역화 - 다국어,시각)
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	<fmt:formatDate>
+		- Date객체만 호환됨
+		- type="출력타입"
+			- date : 날짜 
+			- time : 시간
+			- both : 날짜+시간
+		- dateStyle : short | medium | long | full
+		- timeStyle : short | medium | long | full
+		- pattern="직접출력패턴"
+			- java.time 패키지와 동일		
+	<fmt:formatNumber>
+		- java.text 패키지
+			- 형식화 클래스
+				- DecimalFormat
+				- SimpleDateFormat
+				- MessageFormat
+		- value="값"			
+		- groupingUsed=""
+			- true(기본값) : 세자리마다 ,로 구분
+			- false : 구분 없음
+		- pattern="형식"
+			- java.text 패키지 : 형식화 클래스 참조
+		- type=""
+			- currency : 통화
+			- percent : 퍼센트로 변환 : 0.25 -> 25%
+		- 지역화에 따른 형식화가 다름
+	<fmt:setLocale>
+		- java.util.Locale
+		- 지역화
+		- 요청헤더 : Accept-Language를 토대로 지역화 Locale객체 생성
+		- value="값"
+			- 언어코드_국가코드 -> ko_kr, ja_jp, zh_cn, ...
+			- 언어코드 -> ko, ja, zh, ...
+	<fmt:timeZone>
+		- 태그 내부의 타임존이 변경
+		- value="ZoneId" 시간대 ID
+	<fmt:setTimeZone>
+		- 다음 동일 태그가 나올때까지 변경
+		- value="ZoneId" 시간대 ID
+	<fmt:setBundle>	
+		- 다음 동일태그가 나올 때가지로 한정
+	<fmt:bundle>
+		- 태그 내부에 한정 
+		- basenames="메세지 파일 경로"
+		- 메세지 : 특정단어(아이디, 비밀번호, 이메일 ...)을 모아서 관리
+		- java.text.MessageFormat
+		- 다국어 구현 가능
+		- 메세지 파일 경로 설정 : (properties)파일
+		- <fmt:message key="..." />
+
+	<fmt:requestEncoding value="utf-8" />
+
+함수(functions) 라이브러리
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+	- 문자열가공
+	- String클래스와 유사한 기능
+	- EL식 내에서 사용
+
+-----------------------------------------------------------------------------------------------
+
+커스텀액션
+	커스텀 액션을 만드는 방법
+		태그 파일(.tag) -> 번역 -> SimpleTag
+	
+		클래스파일(SimpleTag - SimpleTagSupport클래스)
+	태그파일을 이용해서 커스텀 액션 만들기
+		태그 파일에서 사용할수 있는 지시어
+		<%@ tag... %>
+			- trimDirectiveWhitespaces="true" 페이지소스 공백 제거
+			- dynamic-attributes="attrs" 
+				-> 동적속성 attrs가 EL속성으로 추가(Map<String, String>형태),
+				-> 속성범위:pageContext
+		<%@ include file="" %>
+		<%@ attribute name="속성명" type="속성타입" %> : 태그의 속성값
+			- type : java.lang.String이 기본값
+				- 기본자료형 : 기본 자료형 래퍼클래스
+					- 정수 : java.lang.Integer, java.lang.Long
+			- required : true 필수속성 지정
+		<%@ variable %> : EL식 변수 설정
+		tag -> page속성과 매우 비슷함
+		@tag
+			body-content
+				단일태그 : empty  
+				열린태그~닫힌태그 : scriptless - 자바코드X, EL식, 액션태그, 타 태그
+				열린태그~닫힌태그 : tagdependent - 내용을 텍스트로만 인식
+
+-----------------------------------------------------------------------------------------------
+클래스패스
+	- 클래스를 인식할수 있는 폴더
+	- 클래스패스 이하를 /폴더명/폴더명/파일명
+	- 메이븐 클래스패스
+		- src/main/java
+		- src/main/resources
+			- 정적 자원(css, js, ...)
+			- 설정 파일(xml, properties, yml, ...)
+			- 메세지 파일(properties)
+		- src/test/java
+		- src/test/resources
+		- target
+		- src/main/webapp
+			- WEB-INF
+				- lib
+				- classes
+	- properties 파일 형식
+		키=값
+		키=값
+		- java.util.ResourceBundle클래스의 메서드 사용 가능
+		- 치환코드 {숫자}
+			- <fmt:message key="...">
+				    <fmt:param>{0}의 내용</fmt:param>
+					<fmt:param>{1}의 내용</fmt:param>
+			</fmt:message>
