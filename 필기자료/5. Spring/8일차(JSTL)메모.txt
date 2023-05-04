@@ -1,0 +1,63 @@
+커스텀액션
+
+	커스텀 태그를 이용한 레이아웃 구성
+	
+	M(Model) - Service, DAO ,DTO, Validator
+	
+	V(View) - jsp
+	
+	C(Controller) - Servlet
+	
+	RequestDispatcher : 자바코드내에서 jsp파일을 가져와서 화면에 출력하기 위해
+		- forward
+		- include
+		
+		// jsp파일과 연동
+		RequestDispatcher rd = req.getRequestDispatcher("/member/join.jsp");
+		// 출력버퍼 구현(화면 출력)
+		rd.forward(req,resp);
+	
+	<jsp:forward />
+	<jsp:include />
+	
+	배열,컬렉션을 넘기면
+	<c:forEach>로 구현
+	
+	common.tag에 모든 페이지에 공통적인 부분을 구현
+		- xxx.tag에 특정 페이지에 필요한 부분을 추가로 구현
+			- *.jsp에는 필요한 태그를 사용하여 구현
+	
+	common태그
+		// 특정페이지에 추가될 요소를 지정	
+		<%@ attribute name="header" fragment="true" %>
+		<%@ attribute name="footer" fragment="true" %>
+		
+		// 모든 페이지에 적용되는 CSS 및 스크립트 설정
+		 <head>
+			<title>사이트 제목...</title>
+			<link rel="stylesheet" type="text/css" href="<c:url value='/css/style.css' />">
+			<c:if test="${addCss != null}">
+				<c:forEach var="cssFile" items="${addCss}">
+					<link rel="stylesheet" type="text/css" href="<c:url value='/css/' />${cssFile}.css" >
+				</c:forEach>
+			</c:if>
+			<script src="<c:url value='/js/common.js' />"></script>
+			<c:if test="${addScript != null}">
+				<c:forEach var="jsFile" items="${addScript}">
+					<script src="<c:url value='/js/' />${jsFile}.js"></script>
+				</c:forEach>
+			</c:if>
+		</head>
+		<body>
+			<header>
+				// 특정페이지에 추가되는 요소가 들어가는 위치 지정
+				<jsp:invoke fragment="header"/>
+			</header>
+			<main>
+				<jsp:doBody />
+			</main>
+			<footer>
+				// 특정페이지에 추가되는 요소가 들어가는 위치 지정
+				<jsp:invoke fragment="footer"/>
+			</footer>
+		</body>

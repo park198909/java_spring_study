@@ -82,8 +82,8 @@ JSTL(JSP Standard Tag Library)
 커스텀액션
 	커스텀 액션을 만드는 방법
 		태그 파일(.tag) -> 번역 -> SimpleTag
-	
 		클래스파일(SimpleTag - SimpleTagSupport클래스)
+		
 	태그파일을 이용해서 커스텀 액션 만들기
 		태그 파일에서 사용할수 있는 지시어
 		<%@ tag... %>
@@ -91,20 +91,32 @@ JSTL(JSP Standard Tag Library)
 			- dynamic-attributes="attrs" 
 				-> 동적속성 attrs가 EL속성으로 추가(Map<String, String>형태),
 				-> 속성범위:pageContext
-		<%@ include file="" %>
+			- body-content
+				단일태그 : empty  
+				열린태그~닫힌태그 : scriptless - 자바코드X, EL식, 액션태그, 타 태그
+				열린태그~닫힌태그 : tagdependent - 내용을 텍스트로만 인식
+				- <jsp:doBody/> : 커스텀태그 사용시 값의 위치를 표현
+		<%@ include file="" %> : 다른 파일의 출력버퍼 병합하기
 		<%@ attribute name="속성명" type="속성타입" %> : 태그의 속성값
 			- type : java.lang.String이 기본값
 				- 기본자료형 : 기본 자료형 래퍼클래스
 					- 정수 : java.lang.Integer, java.lang.Long
 			- required : true 필수속성 지정
 		<%@ variable %> : EL식 변수 설정
-		tag -> page속성과 매우 비슷함
-		@tag
-			body-content
-				단일태그 : empty  
-				열린태그~닫힌태그 : scriptless - 자바코드X, EL식, 액션태그, 타 태그
-				열린태그~닫힌태그 : tagdependent - 내용을 텍스트로만 인식
-
+			- 두개의 수 중에서 큰 수 반환 태그
+			- <%@ variable name-given="변수명" variable-class="java.lang.Integer"  scope="AT_END" %>
+			- <%@ variable name-from-attribute="var" alias="minimum" variable-class="java.lang.Integer" scope="AT_END" %>
+			- scope
+				AT_BEGIN : 태그 위쪽
+				NESTED : 태그 안쪽
+				AT_END : 태그 아래쪽
+			- name-given : EL식 변수명 고정
+			- name-from-attribute="속성명" : 속성명으로 정의된 변수명을 변경 가능
+				- alias="정의된 변수명"
+			- required="true" : attribute 필수입력속성
+			- rtexprvalue="false" : EL식 표현 사용불가 - false로 사용가능으로 변경
+		
+			
 -----------------------------------------------------------------------------------------------
 클래스패스
 	- 클래스를 인식할수 있는 폴더

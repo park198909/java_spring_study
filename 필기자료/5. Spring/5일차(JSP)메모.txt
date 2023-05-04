@@ -18,8 +18,9 @@ JSP
 			
 	요청을 처리하는 동안 forward,include가 버퍼에 추가
 		- 요청한 데이터를 추가,조회하는 법
-			- <jsp param:>
-		- HttpServletRequest request -> getParameter()
+			- <jsp param name="key1" value="<%=param1%>" />	 
+				 getParameter()값을 value로 쿼리스트링 사용가능
+			- HttpServletRequest request -> getParameter()
  
 	useBean : JSP페이지에 자바빈즈를 설정, EL식과 함께 사용
 		Bean : 자바 객체 - 기본 생성자형태만 생성 가능

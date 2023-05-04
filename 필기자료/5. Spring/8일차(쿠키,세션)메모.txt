@@ -1,0 +1,35 @@
+쿠키와 세션
+
+쿠키(cookie)
+	쿠키(cookie)란?
+		- 사용자를 개별적으로 구분하기 위한 데이터
+		- 서버가 사용자별로 개인화된 서비스를 제공하기 위해 필요
+		- 서버가 응답헤더(Set-Cookie)를 통해 요청 
+			-> 브라우저가 요청헤더(cookie)를 통해 제공
+		- HttpServletRequest의 getCookies()를 통해 확인가능
+		- HttpServletResponse의 addCookie()를 통해 설정가능
+	쿠키 동작단계
+		- 쿠키 생성 요청
+			- HttpServletResponse
+				- addCookie()
+		- 쿠키 정보 확인
+			- HttpServletRequest
+				- Cookie[] getCookies() : 키=값&키=값 형태로 저장됨
+		- 쿠키 전송
+			- 요청헤더(cookie)에 실어 전송
+		- 쿠키 제거
+			- 쿠키가 만료되면(MaxAge=0) 브라우저가 삭제
+			- 쿠기의 MaxAge를 만료시켜 삭제한다.
+				- cookie.setMaxAge(0);
+
+세션(session)
+	- 세션(session)이란?
+		- 브라우저가 열려있는 동안 세션 객체가 생성
+		- 세션 객체는 모두 개별적으로 존재하므로 사용자 구분이 가능
+			- 브라우저를 따로 열면 세션도 바뀜
+		- 브라우저가 종료되면 세션이 사라지므로 보안에 유리
+		- 개인화된 데이터는 웹서버에 저장됨
+		- JSP내장객체 제공
+		
+	
+
