@@ -1,0 +1,38 @@
+쿠키
+    - 개인화된 서비스 제공 기술(브라우저 별 서비스)
+    - 쿠키 생성
+        서버응답헤더(set-cookie:...)
+    - 브라우저가 저장
+    - 쿠키 사용
+        요청헤더(cookie) -> 서버에 전송
+    - 문제 : 데이터 노출, 네트워크상에 부담
+
+세션
+    - 개인화된 서비스 제공 기술(브라우저 별 서비스)
+    - 데이터는 서버에 저장
+    - 브라우저별로 세션 데이터 찾을 수 있는 SESSION ID 쿠키 값이 존재
+    - 속성(attribute) 관리객체 HttpSession session가 존재
+
+HttpSession
+    속성값을 저장,조회,삭제 가능
+        - 저장 : void setAttribute(String name, Object value);
+        - 조회 : Object getAtrribute(String name);
+        - 삭제 : void removeAttribute(String name);
+        - 전체비우기 : void invalidate();
+            - 예)로그아웃
+
+Servlet 의존성 주입
+    - Servlet-api
+    - Servlet.jsp-api
+    - jstl 1.2
+
+
+
+TDD - 회원가입, 로그인 구현하기
+    TDD 원칙
+        - 쉬운 테스트부터 차례대로 진행
+        - 지속적인 리팩토링
+        
+    M - DAO(Data Aeccess Check)
+    V
+    C
