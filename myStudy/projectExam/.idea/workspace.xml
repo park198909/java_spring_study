@@ -5,111 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c657581c-f3b2-437d-b403-7b5882adade8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../study_solo/study_solo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/java/servlets/Addservlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/java/servlets/BBSPostServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/java/servlets/HundredServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/ServletStudy/src/main/webapp/htmls/BBSInput.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/main/java/servlets/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/test/java/tests/LoginService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/test/java/tests/LoginValidationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/test/java/tests/TDDexam01Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/TDDStudy/src/test/java/tests/TDDexam02Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/CollectionsAndArrays/Ex01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/AnonymousInnerClass/AnonymousInnerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/AnonymousInnerClass/Outer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/AnonymousInnerClass/Outer$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/AnonymousInnerClass/Outer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/LocalInnerClass/LocalInnerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/LocalInnerClass/Outer$1MyRunnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/LocalInnerClass/Outer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/ABC$1Local.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/ABC$In.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/ABC$Sin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/ABC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/InnerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/OutClass$InClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/innerClass/OutClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/staticInnerClass/InnerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/staticInnerClass/OutClass$InStaticClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/InnerClassStudy/staticInnerClass/OutClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/MathQuiz/Ex01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/MathQuiz/Ex02.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/MathQuiz/TestSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/abstract_Interface/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/abstract_Interface/Ex01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/out/production/study_solo/abstract_Interface/SimpleCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/CollectionsAndArrays/Ex01.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/AnonymousInnerClass/AnonymousInnerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/AnonymousInnerClass/Outer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/LocalInnerClass/LocalInnerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/LocalInnerClass/Outer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/innerClass/ABC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/innerClass/InnerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/innerClass/OutClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/staticInnerClass/InnerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/InnerClassStudy/staticInnerClass/OutClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/MathQuiz/Ex01.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/MathQuiz/Ex02.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/src/MathQuiz/TestSum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4. 프로그래밍 언어응용/java_study/study_solo/study_solo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/controllers/BoardServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/controllers/CalculatorServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/controllers/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/controllers/LifeCycleServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/filters/Filter1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/filters/Filter1RequestWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/filters/Filter1ResponseWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/ServletStudy/target/classes/filters/Filter2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TDDStudy2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TDDStudy2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/join.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/joinSuccess.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/login.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -121,6 +35,13 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2PJKVivYQLYtC7GQuYXiVmMYFMl" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -129,21 +50,90 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/탕탕탕프로젝트",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/박영근/국민취업지원제도/github/myStudy/projectExam/src&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="validators" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MemberLoginTest.loginSuccessTest">
+    <configuration name="MemberJoinTest.dataValidation1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projectExam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
+      <option name="METHOD_NAME" value="dataValidation1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberJoinTest.dataValidation2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projectExam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
+      <option name="METHOD_NAME" value="dataValidation2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberJoinTest.joinSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projectExam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
+      <option name="METHOD_NAME" value="joinSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberLoginTest.loginSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projectExam" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
+      <option name="METHOD_NAME" value="loginSuccessTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="tomcat9" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -152,9 +142,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/projectExam" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
@@ -170,6 +157,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MemberLoginTest.loginSuccessTest" />
+        <item itemvalue="JUnit.MemberJoinTest.joinSuccess" />
+        <item itemvalue="JUnit.MemberJoinTest.dataValidation2" />
+        <item itemvalue="JUnit.MemberJoinTest.dataValidation1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -181,5 +176,20 @@
       <updated>1683169769479</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java</url>
+          <line>35</line>
+          <properties class="tests.MemberJoinTest" method="joinSuccess">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
