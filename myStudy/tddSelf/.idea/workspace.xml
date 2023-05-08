@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92ba307f-ba17-4d78-86e4-c19150190ffe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/MessageUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/member/JoinController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/member/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/member/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filters/CommonFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filters/CommonRequestWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/JoinService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/JoinValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/JoinValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/LoginValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/LoginValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/MemberDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/DataLengthValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/DuplicatedValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/RequiredValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags.layouts/common.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags.layouts/main.tag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/join.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MemberLoginTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2PUbt74FD7D5G6c63qhBi6WcMGL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/github2/myStudy/tddself/src",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.MemberJoinTest.requiredFieldTest">
+    <configuration name="MemberJoinTest.joinSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddself" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
+      <option name="METHOD_NAME" value="joinSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberJoinTest.requiredFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddself" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
+      <option name="METHOD_NAME" value="requiredFieldTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MemberJoinTest.requiredFieldTest" />
+        <item itemvalue="JUnit.MemberJoinTest.joinSuccess" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92ba307f-ba17-4d78-86e4-c19150190ffe" name="Changes" comment="" />
+      <created>1683514818685</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683514818685</updated>
+    </task>
+    <servers />
+  </component>
+</project>

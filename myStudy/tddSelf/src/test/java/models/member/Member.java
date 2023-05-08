@@ -5,7 +5,6 @@ public class Member {
     private String userPw;
     private String userPwRe;
     private String userNm;
-    private String checkId;
 
     public String getUserId() {
         return userId;
@@ -37,13 +36,5 @@ public class Member {
 
     public void setUserNm(String userNm) {
         this.userNm = userNm;
-    }
-
-    public String getCheckId() {
-        return checkId;
-    }
-
-    public void setCheckId(String checkId) {
-        this.checkId = checkId;
     }
 }
