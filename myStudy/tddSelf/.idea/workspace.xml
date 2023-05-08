@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92ba307f-ba17-4d78-86e4-c19150190ffe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/exam01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/exam01/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validators/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/JoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/member/JoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/member/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/JoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/member/JoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/JoinValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/member/JoinValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/member/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/member/MemberDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/validators/Validator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +26,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,44 +56,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/myStudy/tddSelf",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "last_opened_file_path": "D:/박영근/국민취업지원제도/github/myStudy/tddSelf",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MemberJoinTest.duplicatedUserIdTest">
-    <configuration name="MemberJoinTest.dupㅣicatedUserIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tddSelf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
-      <option name="METHOD_NAME" value="dupㅣicatedUserIdTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberJoinTest.duplicatedUserIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tddSelf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
-      <option name="METHOD_NAME" value="duplicatedUserIdTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberJoinTest.requiredFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\박영근\국민취업지원제도\github\myStudy\tddSelf\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="models.member" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Smart Tomcat.tomcat9">
+    <configuration name="MemberJoinTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tddself" />
       <extension name="coverage">
         <pattern>
@@ -89,14 +79,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
-      <option name="METHOD_NAME" value="requiredFieldTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberJoinTest.requiredFieldTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tddSelf" />
+    <configuration name="MemberLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddself" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -104,15 +93,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
-      <option name="METHOD_NAME" value="requiredFieldTest2" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberJoinTest.requiredFieldTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tddSelf" />
+    <configuration name="MemberLoginTest.loginPasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddself" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -120,20 +109,86 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
-      <option name="METHOD_NAME" value="requiredFieldTest3" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
+      <option name="METHOD_NAME" value="loginPasswordTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MemberLoginTest.loginSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddself" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
+      <option name="METHOD_NAME" value="loginSuccessTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberLoginTest.loginUnregisteredIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddself" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
+      <option name="METHOD_NAME" value="loginUnregisteredIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat9" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/tddself" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="port" value="3000" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.74" />
+          <option name="path" value="$PROJECT_DIR$/../../../자바/apache-tomcat-9.0.74" />
+          <option name="version" value="9.0.74.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="tddself" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.MemberJoinTest" />
+      <item itemvalue="JUnit.MemberLoginTest" />
+      <item itemvalue="JUnit.MemberLoginTest.loginPasswordTest" />
+      <item itemvalue="JUnit.MemberLoginTest.loginSuccessTest" />
+      <item itemvalue="JUnit.MemberLoginTest.loginUnregisteredIdTest" />
+      <item itemvalue="Smart Tomcat.tomcat9" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MemberJoinTest.duplicatedUserIdTest" />
-        <item itemvalue="JUnit.MemberJoinTest.dupㅣicatedUserIdTest" />
-        <item itemvalue="JUnit.MemberJoinTest.requiredFieldTest3" />
-        <item itemvalue="JUnit.MemberJoinTest.requiredFieldTest2" />
-        <item itemvalue="JUnit.MemberJoinTest.requiredFieldTest" />
+        <item itemvalue="JUnit.MemberLoginTest" />
+        <item itemvalue="JUnit.MemberLoginTest.loginSuccessTest" />
+        <item itemvalue="JUnit.MemberLoginTest.loginUnregisteredIdTest" />
+        <item itemvalue="JUnit.MemberLoginTest.loginPasswordTest" />
+        <item itemvalue="JUnit.MemberJoinTest" />
       </list>
     </recent_temporary>
   </component>
