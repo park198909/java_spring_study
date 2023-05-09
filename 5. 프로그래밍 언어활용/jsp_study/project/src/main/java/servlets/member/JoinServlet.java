@@ -1,7 +1,7 @@
-package Servlets.member;
+package servlets.member;
 
+import commons.ErrorAndGo;
 import models.member.JoinService;
-import models.member.LoginService;
 import models.member.Member;
 import models.member.ServiceManager;
 
@@ -13,13 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static common.ErrorAndGo.*;
-
 @WebServlet("/member/join")
 public class JoinServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         RequestDispatcher rd = req.getRequestDispatcher("/member/join.jsp");
         rd.forward(req, resp);
     }
@@ -27,28 +24,26 @@ public class JoinServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            req.setCharacterEncoding("UTF-8");
             // 회원가입
+            req.setCharacterEncoding("UTF-8");
             ServiceManager manager = new ServiceManager();
             JoinService joinService = manager.joinService();
-
             Member member = manager.member();
             member.setUserId(req.getParameter("userId"));
             member.setUserPw(req.getParameter("userPw"));
             member.setUserPwRe(req.getParameter("userPwRe"));
             member.setUserNm(req.getParameter("userNm"));
-
             joinService.join(member);
-            // 가입 성공 시 로그인 페이지로 이동
-            String url = req.getContextPath() + "/member/login";
-            go(resp, url, "parent");
-        } catch (RuntimeException e) {
-            // 가입 실패 시 에러메시지 출력
+
+            // 성공하면 로그인페이지로 이동
+            String url = req.getContextPath() + "member/login";
+            ErrorAndGo.go(url, "parent", resp);
+
+        } catch (Exception e) {
+            // 실패하면 에러메세지 출력
             e.printStackTrace();
-            alertError(resp,e);
+            String message = e.getMessage();
+            ErrorAndGo.ErrorMsg(resp,message);
         }
-
-
-
     }
 }

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92ba307f-ba17-4d78-86e4-c19150190ffe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdd3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tdd3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tdd3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tdd3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/member/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlets/member/JoinServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlets/member/JoinServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlets/member/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlets/member/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +48,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/github2/myStudy/tddSelf",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/박영근2/myStudy/tddSelf&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\박영근\국민취업지원제도\github\myStudy\tddSelf\src\main\webapp\WEB-INF" />
@@ -59,8 +65,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Smart Tomcat.tomcat9">
-    <configuration name="MemberJoinTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tddself" />
+    <configuration name="MemberJoinTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tddSelf" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -146,26 +152,23 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/tddself" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/9.0.74 (3)" />
-          <option name="path" value="$PROJECT_DIR$/../../../apache-tomcat-9.0.74" />
-          <option name="version" value="9.0.74.0" />
+          <option name="name" value="Apache Tomcat/9.0.73 (2)" />
+          <option name="path" value="$PROJECT_DIR$/../../../apache-tomcat-9.0.73" />
+          <option name="version" value="9.0.73.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="tddself" />
+      <module name="tddSelf" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.MemberJoinTest" />
+      <item itemvalue="JUnit.MemberJoinTest (1)" />
       <item itemvalue="JUnit.MemberLoginTest" />
       <item itemvalue="JUnit.MemberLoginTest.loginPasswordTest" />
       <item itemvalue="JUnit.MemberLoginTest.loginSuccessTest" />
@@ -174,11 +177,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemberJoinTest (1)" />
         <item itemvalue="JUnit.MemberLoginTest" />
         <item itemvalue="JUnit.MemberLoginTest.loginSuccessTest" />
         <item itemvalue="JUnit.MemberLoginTest.loginUnregisteredIdTest" />
         <item itemvalue="JUnit.MemberLoginTest.loginPasswordTest" />
-        <item itemvalue="JUnit.MemberJoinTest" />
       </list>
     </recent_temporary>
   </component>
