@@ -14,8 +14,9 @@ public class ServiceManager {
     }
 
     public JoinValidator joinValidator() {
-        joinValidator().setMemberDao(memberDao());
-        return new JoinValidator();
+        JoinValidator validator = new JoinValidator();
+        validator.setMemberDao(memberDao());
+        return validator;
     }
 
     public JoinService joinService() {

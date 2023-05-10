@@ -1,6 +1,5 @@
 package servlets.member;
 
-import commons.ErrorAndGo;
 import models.member.LoginService;
 import models.member.ServiceManager;
 
@@ -12,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static commons.ErrorAndGo.*;
 
 @WebServlet("/member/login")
 public class LoginServlet extends HttpServlet {
@@ -30,7 +31,7 @@ public class LoginServlet extends HttpServlet {
             LoginService loginService = manager.loginService();
             loginService.login(req);
             // 아이디 저장 클릭하면 쿠키 생성
-            String saveId = req.getParameter("saveId");
+            String saveId = req.getParameter("userId");
             Cookie cookie = new Cookie("saveId",saveId);
             if(saveId == null){
                 cookie.setMaxAge(0);
@@ -42,13 +43,12 @@ public class LoginServlet extends HttpServlet {
 
             // 성공하면 메인페이지 이동
             String url = req.getContextPath() + "/index.jsp";
-            ErrorAndGo.go(url, "parent", resp);
+            go(url, "parent", resp);
 
         } catch (RuntimeException e) {
             // 실패하면 에러메세지 출력
             e.printStackTrace();
-            String message = e.getMessage();
-            ErrorAndGo.ErrorMsg(resp, message);
+            errorMsg(resp, e);
         }
     }
 }

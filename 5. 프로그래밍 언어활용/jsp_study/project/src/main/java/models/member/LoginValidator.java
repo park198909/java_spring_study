@@ -23,7 +23,7 @@ public class LoginValidator implements Validator<HttpServletRequest> {
 
         // 비밀번호 오입력 시 LoginValidationException 발생, 아이디 또는 비밀번호를 확인하세요.
         String memberPw = memberDao.get(userId).getUserPw();
-        if (!memberPw.equals(userPw)) {
+        if (!userPw.equals(memberPw)) {
             throw new LoginValidationException("아이디 또는 비밀번호를 확인하세요.");
         }
 

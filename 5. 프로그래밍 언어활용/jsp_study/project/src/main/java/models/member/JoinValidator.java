@@ -32,13 +32,9 @@ public class JoinValidator implements Validator<Member> {
         }
 
         // 중복가입 체크 - 동일한 아이디가 이미 있으면 ExistValidationException 발생
-        MemberDao memberDao = new MemberDao();
+        memberDao = new MemberDao();
         if(memberDao.get(userId) != null) {
             throw new ExistValidationException();
         }
-
-
-
-
     }
 }

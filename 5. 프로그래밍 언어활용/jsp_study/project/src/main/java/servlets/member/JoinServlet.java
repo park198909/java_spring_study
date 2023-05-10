@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static commons.ErrorAndGo.*;
+
 @WebServlet("/member/join")
 public class JoinServlet extends HttpServlet {
     @Override
@@ -36,14 +38,13 @@ public class JoinServlet extends HttpServlet {
             joinService.join(member);
 
             // 성공하면 로그인페이지로 이동
-            String url = req.getContextPath() + "member/login";
-            ErrorAndGo.go(url, "parent", resp);
+            String url = req.getContextPath() + "/member/login";
+            go(url, "parent", resp);
 
         } catch (Exception e) {
             // 실패하면 에러메세지 출력
             e.printStackTrace();
-            String message = e.getMessage();
-            ErrorAndGo.ErrorMsg(resp,message);
+            errorMsg(resp,e);
         }
     }
 }
