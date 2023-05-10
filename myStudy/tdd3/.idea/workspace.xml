@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b1a31c9-ed63-4111-b5ab-bad11acdb892" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8b1a31c9-ed63-4111-b5ab-bad11acdb892" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,15 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/myStudy/tdd3",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/박영근2/myStudy/tdd3&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.MemberJoinTest.joinRequiredFieldTest">
     <configuration name="MemberJoinTest.joinRequiredFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd3" />
@@ -98,6 +96,7 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
+      <module name="tdd3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

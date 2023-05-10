@@ -28,5 +28,6 @@
                 <input type="text" name="userNm" >
             </dd>
         </dl>
+        <button type="submit">가입하기</button>
     </form>
 </layout:main>
