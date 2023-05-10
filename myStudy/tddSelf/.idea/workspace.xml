@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ba307f-ba17-4d78-86e4-c19150190ffe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. 프로그래밍 언어활용/jsp_study/tdd2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tdd3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tdd3/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tdd3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tdd3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlets/member/JoinServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlets/member/JoinServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlets/member/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlets/member/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="92ba307f-ba17-4d78-86e4-c19150190ffe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +153,7 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="tddSelf" />
+      <module name="tddself" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
