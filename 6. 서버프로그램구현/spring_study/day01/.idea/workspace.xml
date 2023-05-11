@@ -5,36 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d226d83-1661-4038-b2b8-32bdf515a1b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/AppCtx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam01/Ex01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam01/Hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/DuplicationUserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/JoinService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/JoinValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/JoinValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/validators/LengthCheckValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/validators/RequiredValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/validators/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../myStudy/tdd0510/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../myStudy/tdd0510/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/1일차(웹기초)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/2일차(웹기초)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/3일차(웹기초)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/4일차(JSP)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/5일차(EL식)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/5일차(JSP)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/5일차(MVC)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/6일차(EL식)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/6일차(JSTL)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/7일차(JSTL)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/8일차(JSTL)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/8일차(쿠키,세션)메모.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/TDD보강.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/TDD보강_회원가입_로그인.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/개발환경 구축.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/암기목록.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/5. Spring/에노테이션.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/config/AppCtx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/config/AppCtx2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/Ex02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/config/ManualBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/DuplicationUserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/MemberDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/MemberInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/sub/MemberDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/validators/LengthCheckValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/validators/RequiredValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/validators/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppCtx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppCtx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exam01/Ex01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exam01/Ex01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/1일차(spring)메모.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/1일차(spring)메모.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -75,10 +74,15 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/6. 서버프로그램구현/spring_study/day01"
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/6. 서버프로그램구현/spring_study/day01/src/main/java/exam03"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\박영근2\6. 서버프로그램구현\spring_study\day01\src\main\java\exam03" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Ex02">
     <configuration name="Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exam01.Ex01" />
       <module name="day01" />
@@ -92,8 +96,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam03.Ex02" />
+      <module name="day01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exam02.Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam02.Ex01" />
+      <module name="day01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exam03.Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam03.Ex01" />
+      <module name="day01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex02" />
+        <item itemvalue="Application.exam03.Ex01" />
+        <item itemvalue="Application.exam02.Ex01" />
         <item itemvalue="Application.Ex01" />
       </list>
     </recent_temporary>
