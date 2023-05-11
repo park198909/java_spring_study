@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74716bca-9a90-407f-8aab-3ee06d8487c4" name="Changes" comment="gdfsg">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/JoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/member/JoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/JoinValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/member/JoinValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/member/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/member/MemberDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tddSelf/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tddSelf/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tddSelf/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tddSelf/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/member/MemberDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/models/member/MemberDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MemberJoinTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MemberJoinTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +57,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/박영근/국민취업지원제도/github/myStudy/tdd0510"
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/github/myStudy/tdd0510"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MemberLoginTest">
+  <component name="RunManager" selected="JUnit.MemberJoinTest">
     <configuration name="MemberJoinTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd0510" />
       <extension name="coverage">
@@ -76,6 +76,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MemberJoinTest.existIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd0510" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MemberJoinTest" />
+      <option name="METHOD_NAME" value="existIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MemberLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd0510" />
       <extension name="coverage">
@@ -87,22 +103,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberLoginTest.loginRequiredTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tdd0510" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MemberLoginTest" />
-      <option name="METHOD_NAME" value="loginRequiredTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemberJoinTest" />
+        <item itemvalue="JUnit.MemberJoinTest.existIdTest" />
         <item itemvalue="JUnit.MemberLoginTest" />
         <item itemvalue="JUnit.MemberLoginTest.passwordFailTest" />
         <item itemvalue="JUnit.MemberLoginTest.notExistIdTest" />
-        <item itemvalue="JUnit.MemberJoinTest" />
-        <item itemvalue="JUnit.MemberLoginTest.loginRequiredTest" />
       </list>
     </recent_temporary>
   </component>

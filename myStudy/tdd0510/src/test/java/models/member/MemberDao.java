@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MemberDao {
 
-    private Map<String, Member> members = new HashMap<>();
+    private static Map<String, Member> members = new HashMap<>();
 
     public Member get(String userId) {
         return members.get(userId);

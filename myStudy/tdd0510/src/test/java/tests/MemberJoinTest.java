@@ -22,8 +22,8 @@ public class MemberJoinTest {
         joinValidator = new JoinValidator();
         joinValidator.setMemberDao(memberDao);
         joinService = new JoinService(joinValidator,memberDao);
-    
         member = getSuccessMember();
+
     }
 
     public Member getSuccessMember() {
@@ -155,7 +155,7 @@ public class MemberJoinTest {
     @DisplayName("아이디 중복가입 체크 - 이미 가입한 아이디면 JoinValidationException 발생")
     void existIdTest() {
         assertThrows(DuplicateValidationException.class, ()->{
-            System.out.println(member.getEmail());
+            member = getFailMember("userId", "user02");
             joinService.join(member);   // 최초가입
             joinService.join(member);   // 중복가입
         });

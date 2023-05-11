@@ -30,9 +30,9 @@ public class JoinValidator implements Validator<Member> {
         lengthCheck(userPw,8, new JoinValidationException("비밀번호는 8자리 이상 입력하세요."));
         lengthCheck(mobile, 11, 11, new JoinValidationException("전화번호 11자리를 모두 입력하세요."));
 
-        // 아이디 중복가입 체크 - 이미 가입한 아이디면 JoinValidationException 발생
+        // 아이디 중복가입 체크 - 이미 가입한 아이디면 DuplicateValidationException 발생
         if (memberDao.get(userId) != null) {
-            throw  new DuplicateValidationException();
+            throw new DuplicateValidationException();
         }
 
         // 비밀번호 일치 체크 - 일치하지 않으면 JoinValidationException 발생, 비밀번호가 일치하지 않습니다.
