@@ -46,9 +46,11 @@ public class JoinValidator implements Validator<Member>  {
         passwordFormCheck(userPw, new JoinValidationException("비밀번호는  알파벳, 숫자, 특수문자가 1개 이상 포함되어야 하며 한글은 불가합니다."));
 
         // 이메일형식 체크 - 이메일 형식에 맞지 않으면  JoinValidationException 발생, 이메일 형식에 맞춰 입력해주세요(sample@sample.com)
-        Pattern emailP = Pattern.compile("^[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]{2,6}$"); // 이메일 형식 맞춤 여부
+        Pattern emailP = Pattern.compile("^[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]{2,6}$"); // 이메일 형식(.com) 맞춤 여부
+        Pattern emailP2 = Pattern.compile("^[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]{2,6}+\\.[A-Za-z]{2,6}$"); // 이메일 형식(.co.kr) 맞춤 여부
         Matcher matcher = emailP.matcher(email);
-        if (!matcher.find()) {
+        Matcher matcher2 = emailP2.matcher(email);
+        if (!(matcher.find() || matcher2.find())) {
             throw new JoinValidationException("이메일 형식에 맞춰 입력해주세요(sample@sample.com)");
         }
 

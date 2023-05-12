@@ -4,7 +4,6 @@ import exam03.models.member.JoinService;
 import exam03.models.member.MemberDao;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Component;
