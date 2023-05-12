@@ -5,34 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d226d83-1661-4038-b2b8-32bdf515a1b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/Ex01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/config/AppCtx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/config/AppCtx2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam02/models/member/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/Ex01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/Ex02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/config/ManualBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/DuplicationUserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/MemberInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/sub/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/validators/LengthCheckValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/validators/RequiredValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exam03/validators/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppCtx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppCtx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exam01/Ex01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exam01/Ex01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/1일차(spring)메모.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/1일차(spring)메모.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exam02/config/AppCtx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exam02/config/AppCtx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exam03/config/AppCtx2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exam03/models/member/JoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exam03/Ex02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exam03/config/AppCtx.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exam03/config/AppCtx.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exam03/config/AppCtx2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exam03/config/AppCtx2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exam03/models/member/JoinService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exam03/models/member/JoinService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +36,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2PapbkQ8iU5HHJOtQFay5QR6B4o" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,7 +49,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/6. 서버프로그램구현/spring_study/day01/src/main/java/exam03"
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/github/6. 서버프로그램구현/spring_study/day01"
   }
 }]]></component>
   <component name="RecentsManager">

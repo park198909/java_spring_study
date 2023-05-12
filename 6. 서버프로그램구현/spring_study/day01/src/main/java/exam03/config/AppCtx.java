@@ -25,7 +25,7 @@ public class AppCtx {
         return new JoinService();
     }
 
-    @Bean
+
     public JoinValidator joinValidator() {
         return new JoinValidator(memberDao());
     }

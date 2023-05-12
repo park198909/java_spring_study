@@ -213,7 +213,7 @@ public class MemberJoinTest {
     @DisplayName("이메일형식 체크 - 이메일 형식에 맞지 않으면  JoinValidationException 발생, 이메일 형식에 맞춰 입력해주세요(sample@sample.com)")
     void emailFormTest() {
         JoinValidationException thr = assertThrows(JoinValidationException.class, ()->{
-            member = getFailMember("email", "user#$^01@org.com");
+            member = getFailMember("email", "user01@orgcom");
             joinService.join(member);
         });
         String msg = thr.getMessage();

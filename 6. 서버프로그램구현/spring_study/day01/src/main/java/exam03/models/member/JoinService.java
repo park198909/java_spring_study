@@ -11,6 +11,7 @@ public class JoinService {
     @Autowired
     private JoinValidator validator;
 
+
     @Autowired
     private Optional<MemberDao> opt;
 

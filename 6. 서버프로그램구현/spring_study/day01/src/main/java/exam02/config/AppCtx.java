@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-@Configuration
+@Configuration // 스프링 컨테이너 설정 클래스 지정
 @Import(AppCtx2.class)
 public class AppCtx {
     @Bean
