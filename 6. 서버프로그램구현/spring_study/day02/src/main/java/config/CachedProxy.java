@@ -27,7 +27,7 @@ public class CachedProxy {
         if (cache.containsKey(num)) {
             System.out.printf("[%d]캐시 사용됨%n", num);
             return cache.get(num);
-        }        
+        }
         
         Object result = joinPoint.proceed(); // 가져온 메인기능 실행
         
