@@ -1,5 +1,4 @@
-package exam03.models.member;
-
+package models.member;
 
 import java.time.LocalDateTime;
 
@@ -7,9 +6,9 @@ public class Member {
     private String userId;
     private String userPw;
     private String userPwRe;
-
     private String userNm;
-
+    private String email;
+    private String mobile;
     private LocalDateTime regDt;
 
     public String getUserId() {
@@ -44,6 +43,22 @@ public class Member {
         this.userNm = userNm;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
     public LocalDateTime getRegDt() {
         return regDt;
     }
@@ -59,6 +74,8 @@ public class Member {
                 ", userPw='" + userPw + '\'' +
                 ", userPwRe='" + userPwRe + '\'' +
                 ", userNm='" + userNm + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
                 ", regDt=" + regDt +
                 '}';
     }

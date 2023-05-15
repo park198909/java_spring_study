@@ -45,7 +45,7 @@
     - @RestControllerAdvice
   - 자주 사용하는 속성
     - excludeFilters : 여기에 속하면 제외
-      - @Filter
+      - @ComponentScan.Filter
          - FilterType: 필터링 기준
             .ANNOTATION : 에너테이션을 기준으로 필터링 -> classes=...
             .ASSIGNABLE_TYPE : 클래스, 인터페이스를 기준으로 필터링 -> classes="..."
