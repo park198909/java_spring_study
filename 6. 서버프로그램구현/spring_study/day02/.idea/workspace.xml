@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="70155f03-6531-4e89-8163-4b6a877c8acd" name="Changes" comment="" />
+=======
     <list default="true" id="70155f03-6531-4e89-8163-4b6a877c8acd" name="Changes" comment="">
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -18,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/2일차(spring)메모.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/2일차(spring)메모.md" afterDir="false" />
 >>>>>>> 313e8a5ecd282a4caff2f49920c184d2b3413196
     </list>
+>>>>>>> 98709f7b0e76bfa33d9c5908a2d798368ee13c9e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +49,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/jdbc 과제/jdbcTemp"
+=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -55,8 +67,9 @@
 =======
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/PYG/github/6. 서버프로그램구현/spring_study/day02&quot;
 >>>>>>> 313e8a5ecd282a4caff2f49920c184d2b3413196
+>>>>>>> 98709f7b0e76bfa33d9c5908a2d798368ee13c9e
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\박영근2\6. 서버프로그램구현\spring_study\day02\src\main\java\exam05" />
