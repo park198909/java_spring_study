@@ -39,7 +39,8 @@
             - Signature getSignature() :
             - Object getTarget() : 원래 객체를 저장한 메서드
             - Object[] getArgs() : 매개변수로 넘어온 값을 저장한 메서드
-      6) 메서드에 @Pointcut 으로 메서드의 기능이 적용될 범위지정
+      6) 
+      7) 메서드에 @Pointcut 으로 메서드의 기능이 적용될 범위지정
         - execution="..." 내부에 범위를 명시자 표현식 형태로 입력
           - execution 명시자 표현식
             - (public void set*(..))
