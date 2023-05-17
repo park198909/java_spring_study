@@ -17,11 +17,12 @@ public class JoinController {
     private HttpSession session;
 
     @GetMapping
-    public String join() {
-
+    public String join(Model model) {
+        model.addAttribute("joinForm", new JoinForm());
         return "member/join";
     }
 
+    /**
     @PostMapping
     public String joinPs(JoinForm joinForm, Model model, HttpServletRequest request) {
 //        System.out.println("회원가입!!!");
@@ -32,6 +33,13 @@ public class JoinController {
         System.out.println(requestURI);
         System.out.println(session);
 
+        return "member/join";
+    }*/
+
+    @PostMapping
+    public String joinPs(JoinForm join) {
+        System.out.println(join);
+        // 커맨드 객체는 EL식 변수로 추가됨 -> joinForm
         return "member/join";
     }
 }

@@ -5,44 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63e8df30-06fd-4339-bf38-8df84033a801" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/members/JoinController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/members/JoinForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/join.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/models/member/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/models/member/JoinService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/models/member/JoinValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/models/member/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/models/member/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/models/member/ServiceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/validators/RequiredCheckValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../myStudy/stackedTDD/src/test/java/validators/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day04/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/configs/CommonLib.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/members/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/member/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/join.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/members/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/members/JoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/members/JoinForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/members/JoinForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,9 +58,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/박영근2/6. 서버프로그램구현/spring_study/day05/src",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RunManager">
@@ -93,9 +74,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/day05" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
