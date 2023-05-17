@@ -9,8 +9,12 @@ public class ServiceManager {
         return new MemberDao();
     }
 
+    public JoinValidator joinValidator() {
+        return new JoinValidator();
+    }
+
     public JoinService joinService() {
-        return new JoinService();
+        return new JoinService(joinValidator());
     }
 
 

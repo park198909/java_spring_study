@@ -1,7 +1,14 @@
 package models.member;
 
 public class JoinService {
-    public void join(Member member) {
 
+    private JoinValidator validator;
+
+    public JoinService(JoinValidator validator) {
+        this.validator = validator;
+    }
+
+    public void join(Member member) {
+        validator.check(member);
     }
 }
