@@ -10,6 +10,6 @@ public class JoinForm {
     private String userPw;
     private String userPwRe;
     private String userNm;
-    private List<String> hobby;
+//    private List<String> hobby;
     private boolean agree;
 }
