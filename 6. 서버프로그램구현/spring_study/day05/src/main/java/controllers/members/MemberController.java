@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -38,6 +39,12 @@ public class MemberController {
         }
 
         model.addAttribute("members", members);
+
+        String[] addCss = {"member/style", "order/style"};
+        List<String> addScript = Arrays.asList("member/form", "fileupload");
+
+        model.addAttribute("addCss", addCss);
+        model.addAttribute("addScript", addScript);
 
         return "member/list";
     }
