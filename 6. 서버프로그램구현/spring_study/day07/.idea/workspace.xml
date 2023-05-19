@@ -5,27 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52b3d511-7240-450a-ba32-f15151997539" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../day05/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day05/src/main/resources/static/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day05/src/main/webapp/WEB-INF/view/layouts/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day05/src/main/webapp/WEB-INF/view/main/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day05/src/main/webapp/WEB-INF/view/outlines/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day05/src/main/webapp/WEB-INF/view/outlines/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day05/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day05/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day05/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day05/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day05/src/main/java/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day05/src/main/java/controllers/members/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day05/src/main/java/controllers/members/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day05/src/main/webapp/WEB-INF/view/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../day05/src/main/webapp/WEB-INF/view/member/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/JoinValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/JoinValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/JoinForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/JoinForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/member/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/join.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링 개발환경 구축.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../필기자료/6. spring/스프링_에너테이션.md" afterDir="false" />
     </list>
