@@ -18,6 +18,10 @@
                 configs.ControllerConfig
             </param-value>
         </init-param>
+        <init-param>
+            <param-name>spring.profiles.active</param-name>     <!-- @Profile 활성화 -->
+            <param-value>real</param-value>                     <!-- 활성화할 변수명 -->
+        </init-param>
         <load-on-startup>1</load-on-startup>
 
         <multipart-config>

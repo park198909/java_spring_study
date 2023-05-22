@@ -2,12 +2,15 @@ package configs;
 
 import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.servlet.config.annotation.*;
 import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 import org.thymeleaf.spring5.SpringTemplateEngine;
@@ -18,6 +21,12 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 @EnableWebMvc
 @Import(DbConfig.class)
 public class MvcConfig implements WebMvcConfigurer {
+
+    @Value("${file.upload.path}")
+    private String fileUploadPath;
+
+    @Value("${thymeleaf.cache}")
+    private String cacheable;
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -31,6 +40,9 @@ public class MvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
+
+        registry.addResourceHandler("/uploads/**")
+                .addResourceLocations("file:///" + fileUploadPath);
     }
 
     @Bean
@@ -39,7 +51,7 @@ public class MvcConfig implements WebMvcConfigurer {
         templateResolver.setApplicationContext(applicationContext);
         templateResolver.setPrefix("/WEB-INF/view/");
         templateResolver.setSuffix(".html");
-        templateResolver.setCacheable(false);
+        templateResolver.setCacheable(Boolean.parseBoolean(cacheable));
         return templateResolver;
     }
 
@@ -91,8 +103,6 @@ public class MvcConfig implements WebMvcConfigurer {
                 .addPathPatterns("/**");
     }
 
-
-
     @Bean
     public MemberOnlyInterceptor memberOnlyInterceptor() {
         return new MemberOnlyInterceptor();
@@ -102,4 +112,13 @@ public class MvcConfig implements WebMvcConfigurer {
     public CommonInterceptor commonInterceptor() {
         return new CommonInterceptor();
     }
+
+    /** 설정 관련 부분을 파일로 만들어 관리 */
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer properties() {
+        PropertySourcesPlaceholderConfigurer conf = new PropertySourcesPlaceholderConfigurer();
+        conf.setLocations(new ClassPathResource("application.properties"));
+        return conf;
+    }
+
 }
