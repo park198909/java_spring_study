@@ -1,6 +1,7 @@
 package com.study.models.board;
 
 import com.study.controllers.board.BoardForm;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Repository
 @Transactional
+@Log
 public class BoardDao {
 
     @Autowired
@@ -81,16 +83,17 @@ public class BoardDao {
         return board;
     }
 
-    public void processStat() {
+    public List<Board> processStat() {
         try {
             String sql = "SELECT SUBSTR(REGDT, 1, 14), COUNT(*) FROM BOARDDATA " +
-                    "WHERE REGDT BETWEEN '23/05/22' AND '23/05/23' GROUP BY SUBSTR(REGDT, 1, 14) ";
+                    "WHERE REGDT >= REGDT-1 GROUP BY SUBSTR(REGDT, 1, 14) ";
             List<Board> batches = jdbcTemplate.query(sql, this::mapper);
+            System.out.println(batches);
+            return batches;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
     }
-
-
 }
 
