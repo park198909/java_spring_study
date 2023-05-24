@@ -1,7 +1,10 @@
 package org.koreait.models.board;
 
-public class BoardValidationException extends RuntimeException{
+import org.koreait.commons.CommonException;
+import org.springframework.http.HttpStatus;
+
+public class BoardValidationException extends CommonException {
     public BoardValidationException(String message) {
-        super(message);
+        super(message, HttpStatus.BAD_REQUEST);
     }
 }
