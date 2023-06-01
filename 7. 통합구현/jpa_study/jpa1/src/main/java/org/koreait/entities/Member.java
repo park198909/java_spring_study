@@ -1,7 +1,7 @@
 package org.koreait.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.koreait.constants.MemberType;
@@ -12,10 +12,11 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Data
-@Table(name = "users", indexes = {
-        @Index(name="idx_member_usernm", columnList = "userNm")
-})   // 테이블명=user 로 생성
+@Data @Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "users",
+        indexes = { @Index(name="idx_member_usernm", columnList = "userNm") })   // 테이블명=user 로 생성
 public class Member {
     @Id
 //    @TableGenerator(name = "user_seq")
@@ -48,6 +49,11 @@ public class Member {
     @Temporal(TemporalType.DATE)   // 날짜 + 시간
     private Date birthDt;
 
-    @OneToMany(mappedBy="member")
+    @OneToMany(mappedBy="member", fetch=FetchType.LAZY) // 지연로딩 - global 전략, EAGER 는 필요할 때만
     private List<BoardData> boardDatas = new ArrayList<>();
+
+    @OneToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="address_id")
+    @ToString.Exclude
+    private Address address;
 }
