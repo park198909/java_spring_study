@@ -49,7 +49,7 @@ public class Member {
     @Temporal(TemporalType.DATE)   // 날짜 + 시간
     private Date birthDt;
 
-    @OneToMany(mappedBy="member", fetch=FetchType.LAZY) // 지연로딩 - global 전략, EAGER 는 필요할 때만
+    @OneToMany(mappedBy="member", fetch=FetchType.LAZY, cascade=CascadeType.REMOVE) // 지연로딩 - global 전략, EAGER 는 필요할 때만
     private List<BoardData> boardDatas = new ArrayList<>();
 
     @OneToOne(fetch=FetchType.LAZY)
