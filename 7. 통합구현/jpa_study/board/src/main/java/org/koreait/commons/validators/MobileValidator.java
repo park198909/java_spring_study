@@ -7,7 +7,7 @@ public interface MobileValidator {
         // 2. 패턴확인
         String pattern = "^01[016]\\d{3,4}\\d{4}$";
 
-        boolean matched = pattern.matches(pattern);
+        boolean matched = mobile.matches(pattern);
 
         return matched;
     }

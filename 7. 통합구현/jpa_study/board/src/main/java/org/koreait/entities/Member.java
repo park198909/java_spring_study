@@ -1,10 +1,8 @@
 package org.koreait.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.koreait.commons.constants.MemberType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +28,11 @@ public class Member extends BaseEntity {
     @Column(length = 11)
     private String mobile;
 
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private MemberType type;    // USER : 사용자 , ADMIN : 관리자
+
     @OneToMany(mappedBy = "member")
     private List<BoardData> boardDatas = new ArrayList<>();
+
 }
