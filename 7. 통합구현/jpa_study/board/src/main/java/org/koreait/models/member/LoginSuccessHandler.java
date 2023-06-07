@@ -9,16 +9,19 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import java.io.IOException;
-
+/*
+* 로그인 성공 시 처리 구현
+* */
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
             throws IOException, ServletException {
-        // 기존 세션의 예외 정보 초기화
+        /* 기존 세션의 예외 정보 초기화 S */
         HttpSession session = request.getSession();
         session.removeAttribute("loginField");
         session.removeAttribute("message");
         session.removeAttribute("userId");
+        /* 기존 세션의 예외 정보 초기화 E */
 
         /* 아이디 쿠키 저장 처리 S */
         Cookie cookie = new Cookie("saveId", request.getParameter("userId"));
@@ -35,7 +38,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         session.setAttribute("memberInfo", memberInfo);
         /* 회원 정보를 세션에 별도로 저장 - 편의기능 E */
 
-        // 로그인 성공시 이동
+        /* 로그인 성공시 이동 */
         String url = request.getContextPath() + "/";
         response.sendRedirect(url);
     }

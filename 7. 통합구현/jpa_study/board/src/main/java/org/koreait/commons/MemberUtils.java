@@ -8,6 +8,9 @@ import org.koreait.models.member.MemberInfo;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
+/*
+* 편의 기능 구현
+* */
 @Component
 @RequiredArgsConstructor
 public class MemberUtils {

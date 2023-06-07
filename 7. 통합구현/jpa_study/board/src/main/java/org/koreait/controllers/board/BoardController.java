@@ -2,7 +2,6 @@ package org.koreait.controllers.board;
 
 import lombok.RequiredArgsConstructor;
 import org.koreait.entities.BoardData;
-import org.koreait.entities.Member;
 import org.koreait.models.board.BoardListService;
 import org.koreait.repositories.BoardDataRepository;
 import org.koreait.repositories.MemberRepository;
@@ -24,6 +23,12 @@ public class BoardController {
     @GetMapping
     @ResponseBody
     public void index() {
+
+        BoardData boardData = boardDataRepository.findById(112L).orElse(null);
+        boardData.setSubject("(수정)제목1");
+        boardDataRepository.flush();
+
+//        insertData();
 //        List<BoardData> items = listService.gets();
 //        items.stream().forEach(System.out::println);
 
@@ -41,15 +46,14 @@ public class BoardController {
 
     private void insertData() {
         // 회원1 추가
-        Member member = Member.builder()
-                .userId("user01")
-                .userPw("123456")
-                .userNm("사용자01")
-                .email("user01@test.org")
-                .mobile("01000000000")
-                .build();
-        member = memberRepository.saveAndFlush(member);
-
+//        Member member = Member.builder()
+//                .userId("user01")
+//                .userPw("123456")
+//                .userNm("사용자01")
+//                .email("user01@test.org")
+//                .mobile("01000000000")
+//                .build();
+//        member = memberRepository.saveAndFlush(member);
         // 게시글 10개 추가
         List<BoardData> items = new ArrayList<>();
         for (int i=1; i<=10; i++) {
@@ -57,7 +61,7 @@ public class BoardController {
                     .subject("제목"+i)
                     .content("내용"+i)
                     .poster("작성자"+i)
-                    .member(member)
+//                    .member(member)
                     .build();
             items.add(item);
         }

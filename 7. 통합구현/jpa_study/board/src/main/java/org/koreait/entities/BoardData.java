@@ -5,7 +5,7 @@ import lombok.*;
 
 @Entity @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
-public class BoardData extends BaseEntity {
+public class BoardData extends BaseUserEntity {
     @Id @GeneratedValue
     private Long id; // 게시글 번호
 

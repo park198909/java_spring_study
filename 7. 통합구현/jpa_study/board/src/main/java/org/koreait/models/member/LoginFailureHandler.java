@@ -10,6 +10,9 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import java.io.IOException;
 
 public class LoginFailureHandler implements AuthenticationFailureHandler {
+    /*
+    * 로그인 실패 시 처리 구현
+    * */
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         /**
