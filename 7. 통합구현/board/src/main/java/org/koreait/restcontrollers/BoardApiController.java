@@ -24,7 +24,6 @@ public class BoardApiController {
 
     @PostMapping("/write")
     public ResponseEntity<Object> write(@RequestBody BoardForm boardForm) {
-//        log.info(boardForm.toString());
         saveService.save(boardForm);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
@@ -34,7 +33,7 @@ public class BoardApiController {
     public ResponseEntity<List<BoardData>> list() {
         List<BoardData> items = listService.gets();
         if (items.isEmpty()) {  // 조회 결과가 없을 때
-            throw new BoardValidationException("조회에 실패했습니다.");
+            throw new BoardValidationException("리스트 조회에 실패했습니다.");
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(items);

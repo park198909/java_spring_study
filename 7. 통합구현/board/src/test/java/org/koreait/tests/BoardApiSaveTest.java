@@ -37,7 +37,7 @@ public class BoardApiSaveTest {
                         .contentType("application/json")
                         .content(params))
                 .andDo(print()) // 요청과 응답의 데이터를 출력하는 기능(MockMvcResultHandlers)
-                .andExpect(status().isCreated());
+                .andExpect(status().isCreated());   // assertTrue
     }
 
     @Test
@@ -45,11 +45,11 @@ public class BoardApiSaveTest {
     void requiredSubjectTest() throws Exception {
         String params = getParams("", "테스트 내용");
 
-        String body = mockMvc.perform(post("/api/board/write")
-                        .contentType("application/json")
-                        .content(params))
-                        .andReturn()
-                        .getResponse()
+        String body = mockMvc.perform(post("/api/board/write")  // 작동할 URL
+                        .contentType("application/json")                    // JSON 타입
+                        .content(params))                       // 요청 바디 (request body)
+                        .andReturn()                    // 응답 바디를 반환
+                        .getResponse()                  // 웅답 바디
                         .getContentAsString(Charset.forName("UTF-8")); // 응답 body 데이터를 스트링으로 저장
         assertTrue(body.contains("제목을 입력"));
     }

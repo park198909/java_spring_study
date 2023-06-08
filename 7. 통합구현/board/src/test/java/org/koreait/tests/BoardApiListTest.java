@@ -34,9 +34,9 @@ public class BoardApiListTest {
     private BoardSaveService saveService;
     
     private void getParams() {
-        for (int i=1; i<=5; i++) {
+        for (long i=1; i<=5; i++) {
             BoardForm item = new BoardForm();
-            item.setId((long) i);
+            item.setId(i);
             item.setSubject("테스트 글제목"+ i);
             item.setContent("테스트 글내용"+ i);
             saveService.save(item);
@@ -44,14 +44,19 @@ public class BoardApiListTest {
     }
 
     @Test
-    @DisplayName("게시글 리스트 조회 성공 시 리스트 출력")
+    @DisplayName("게시글 리스트 조회 성공 시 응답코드 200, 리스트 출력")
     void listSuccessTest() throws Exception {
         getParams();    // DB에 임의의 값 5개 저장
         String body = mockMvc.perform(get("/api/board/list")
                         .contentType("application/json"))
+                .andDo(print())
+                .andExpect(status().isOk())
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
+//                .andReturn()
+//                .getResponse()
+//                .getContentAsString(Charset.forName("UTF-8"));
         System.out.println(body);
     }
 
@@ -63,7 +68,7 @@ public class BoardApiListTest {
                 .andReturn() // 요청과 응답의 데이터를 출력하는 기능(MockMvcResultHandlers)
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
-        assertTrue(body.contains("조회에 실패"));
+        assertTrue(body.contains("리스트 조회에 실패"));
     }
 
 }
