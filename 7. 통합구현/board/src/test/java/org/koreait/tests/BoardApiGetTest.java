@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.properties")
 @AutoConfigureMockMvc
-public class boardApiGetTest {
+public class BoardApiGetTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -54,9 +54,7 @@ public class boardApiGetTest {
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
-//                .andReturn()
-//                .getResponse()
-//                .getContentAsString(Charset.forName("UTF-8"));
+
         System.out.println(body);
     }
 
