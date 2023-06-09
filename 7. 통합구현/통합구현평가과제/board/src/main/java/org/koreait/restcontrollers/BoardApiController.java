@@ -29,7 +29,7 @@ public class BoardApiController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<BoardData>> list(BoardForm boardForm) {
+    public ResponseEntity<List<BoardData>> list() {
 
         List<BoardData> items = listService.gets();
         if (items.isEmpty()) {
