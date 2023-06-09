@@ -26,7 +26,7 @@ public class BoardSaveValidator implements Validator<BoardForm> {
         // 게시글 수정인 경우
         if (mode != null && mode.equals("update")) {
             if (id == null) { // 게시글 번호 필수 체크
-                nullCheck(id, new BoardValidationException("잘못된 접근입니다."));
+                nullCheck(id, new BoardValidationException("게시글 수정에 실패했습니다."));
             }
 
             // 게시글 등록 여부 체크
