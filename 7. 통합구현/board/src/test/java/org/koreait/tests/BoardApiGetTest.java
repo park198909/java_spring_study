@@ -54,6 +54,10 @@ public class BoardApiGetTest {
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
+<<<<<<< HEAD
+=======
+
+>>>>>>> e907c945ec1b7c8468094904637b303209d17abb
         System.out.println(body);
     }
 

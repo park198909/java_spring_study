@@ -54,9 +54,7 @@ public class BoardApiListTest {
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
-//                .andReturn()
-//                .getResponse()
-//                .getContentAsString(Charset.forName("UTF-8"));
+
         System.out.println(body);
     }
 

@@ -22,3 +22,15 @@
   3) rest API 구현 실습
     - TDD 통합테스트 설정
     - TDD 통합테스크 주요 메서드
+## 2023.06.08 수업내용
+    1) 인터셉터
+    2) 자바스크립트
+      - 주소 기능 API
+    3) Oauth 인증
+      - 카카오 로그인 기능 구현
+    4) Jackson
+      - ObjectMapper
+        - readValue :  JSON 문자열 -> 자바 객체
+        - writeValueAsString : 자바 객체 -> JSON 문자열
+
+

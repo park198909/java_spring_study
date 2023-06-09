@@ -28,6 +28,13 @@ public class Member extends BaseEntity {
     @Column(length = 11)
     private String mobile;
 
+    @Column(length = 10)
+    private String zipcode;
+    @Column(length = 100)
+    private String address;
+    @Column(length = 100)
+    private String addressSub;
+
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private MemberType type;    // USER : 사용자 , ADMIN : 관리자
