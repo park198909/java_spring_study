@@ -1,8 +1,7 @@
 package org.koreait.restcontrollers;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
-import org.koreait.commons.rest.JSONResult;
+import oracle.jdbc.proxy.annotation.Post;
 import org.koreait.controllers.BoardForm;
 import org.koreait.entities.BoardData;
 import org.koreait.models.board.*;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController @Log
+@RestController
 @RequestMapping("/api/board")
 @RequiredArgsConstructor
 public class BoardApiController {
@@ -24,6 +23,7 @@ public class BoardApiController {
 
     @PostMapping("/write")
     public ResponseEntity<Object> write(@RequestBody BoardForm boardForm) {
+
         saveService.save(boardForm);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
@@ -31,8 +31,9 @@ public class BoardApiController {
 
     @GetMapping("/list")
     public ResponseEntity<List<BoardData>> list() {
+
         List<BoardData> items = listService.gets();
-        if (items.isEmpty()) {  // 조회 결과가 없을 때
+        if (items.isEmpty()) {
             throw new BoardValidationException("리스트 조회에 실패했습니다.");
         }
 
@@ -40,25 +41,25 @@ public class BoardApiController {
     }
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<Object> get(@PathVariable Long id) {
-        BoardData boardData = infoService.get(id);
+    public ResponseEntity<BoardData> get(@PathVariable Long id) {
+        BoardData item = infoService.get(id);
 
-        return ResponseEntity.status(HttpStatus.OK).body(boardData);
+        return ResponseEntity.status(HttpStatus.OK).body(item);
     }
 
     @GetMapping("/delete/{id}")
     public ResponseEntity<Object> delete(@PathVariable Long id) {
         deleteService.delete(id);
+
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @PostMapping("/update/{id}")
-    public ResponseEntity<Object> write(@PathVariable Long id, @RequestBody BoardForm boardForm) {
+    public ResponseEntity<Object> update(@PathVariable Long id, @RequestBody BoardForm boardForm) {
         boardForm.setId(id);
         boardForm.setMode("update");
         saveService.save(boardForm);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
-
 }

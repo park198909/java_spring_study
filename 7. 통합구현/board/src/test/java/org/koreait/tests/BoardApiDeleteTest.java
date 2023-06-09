@@ -8,6 +8,7 @@ import org.koreait.models.board.BoardSaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -22,17 +23,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.properties")
 @AutoConfigureMockMvc
-public class boardApiGetTest {
+public class BoardApiDeleteTest {
 
     @Autowired
     private MockMvc mockMvc;
+
     @Autowired
     private BoardSaveService saveService;
-
-    @BeforeEach
-    void init() {
-        getParams();
-    }
 
     private void getParams() {
         for (int i=1; i<=5; i++) {
@@ -44,32 +41,35 @@ public class boardApiGetTest {
         }
     }
 
+    @BeforeEach
+    void init() {
+        getParams();
+    }
+
     @Test
-    @DisplayName("게시글 조회 성공 시 응답상태코드 200, 게시글 출력")
-    void getSuccessTest() throws Exception {
-        String body = mockMvc.perform(get("/api/board/get/1")
-                        .contentType("application/json"))
-                .andDo(print())
-                .andExpect(status().isOk())
+    @DisplayName("게시글 삭제 성공시 응답코드 200")
+    void deleteSuccessTest() throws Exception {
+        mockMvc.perform(get("/api/board/delete/1")
+                .contentType("application/json")
+                ).andDo(print())
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    @DisplayName("게시글 삭제 실패시 Bad_Request 문구 발생")
+    void deleteFailTest() throws Exception {
+        String body = mockMvc.perform(get("/api/board/delete/7")
+                        .contentType("application/json")
+                ).andDo(print())
+                .andExpect(status().isBadRequest())
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
-//                .andReturn()
-//                .getResponse()
-//                .getContentAsString(Charset.forName("UTF-8"));
-        System.out.println(body);
+        assertTrue(body.contains("삭제에 실패"));
     }
 
-    @Test
-    @DisplayName("게시글 조회 실패 시 Bad_Request, 문구 발생 ")
-    void getFailureTest() throws Exception {
-        String body = mockMvc.perform(get("/api/board/get/6")
-                        .contentType("application/json"))
-                .andReturn() // 요청과 응답의 데이터를 출력하는 기능(MockMvcResultHandlers)
-                .getResponse()
-                .getContentAsString(Charset.forName("UTF-8"));
-        assertTrue(body.contains("게시글 조회에 실패"));
-    }
+
+
+
+
 }
-
-
