@@ -1,15 +1,15 @@
 package org.koreait.models.member;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.koreait.commons.constants.MemberType;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-/**
- * 시큐리티에서 로그인 기능 구현
- */
 @Data @Builder
 @AllArgsConstructor @NoArgsConstructor
 public class MemberInfo implements UserDetails {
@@ -21,8 +21,9 @@ public class MemberInfo implements UserDetails {
     private String email;
     private String mobile;
     private MemberType type;
-    
-    private Collection<GrantedAuthority> authorities;   // 권한에 대한 부분
+
+    private Collection<GrantedAuthority> authorities;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

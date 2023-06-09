@@ -7,9 +7,12 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.ResourceBundle;
+
 @Configuration
 @EnableJpaAuditing
 public class MvcConfig implements WebMvcConfigurer {
+
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource ms = new ResourceBundleMessageSource();
@@ -18,4 +21,5 @@ public class MvcConfig implements WebMvcConfigurer {
 
         return ms;
     }
+
 }

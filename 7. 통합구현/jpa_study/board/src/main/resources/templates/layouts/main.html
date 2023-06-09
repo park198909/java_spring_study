@@ -2,15 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-        <!-- 보안 용 토큰 생성 -->
         <meta name="_csrf" th:content="${_csrf.token}">
         <meta name="_csrf_header" th:content="${_csrf.headerName}">
-
         <title th:if="${pageTitle}" th:text="${pageTitle}"></title>
         <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-        <link rel="stylesheet" type="text/css" th:each="file : ${addCss}" th:href="@{/css/{file}.css(file=${file}})}">
+        <link rel="stylesheet" type="text/css" th:each="file : ${addCss}" th:href="@{/css/{file}.css(file=${file})}">
         <th:block layout:fragment="addCss"></th:block>
-
         <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
         <script th:src="@{/js/common.js}"></script>
         <script th:each="file : ${addScript}" th:src="@{/js/{file}.js(file=${file})}"></script>
@@ -18,8 +15,10 @@
     </head>
     <body>
         <header th:replace="~{outlines/header::common}"></header>
+
         <main layout:fragment="content"></main>
+
         <footer th:replace="~{outlines/footer::common}"></footer>
-        <iframe name="ifrmProcess" calss="dn"></iframe>
+        <iframe name="ifrmProcess" class="dn"></iframe>
     </body>
 </html>

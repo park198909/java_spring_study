@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <header th:fragment="common">
-        <th:block sec:authorize="isAuthenticated()"> <!-- 로그인 시 구현되는 부분 -->
+        <th:block sec:authorize="isAuthenticated()">
             [[${#messages.msg('member.loginMsg', session.memberInfo.userNm, session.memberInfo.userId)}]]
             <a th:href="@{/member/logout}" th:text="#{member.btn.logout}"></a>
 
             <a sec:authorize="hasAuthority('ADMIN')" th:href="@{/admin}">사이트 관리</a>
         </th:block>
-        <th:block sec:authorize="isAnonymous()"> <!-- 미 로그인 시 구현되는 부분 -->
+        <th:block sec:authorize="isAnonymous()">
             <a th:href="@{/member/login}" th:text="#{member.btn.login}"></a>
             <a th:href="@{/member/join}" th:text="#{member.btn.join}"></a>
         </th:block>

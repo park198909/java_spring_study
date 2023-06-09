@@ -16,7 +16,7 @@ import java.util.List;
 public class BoardListService {
 
     private final EntityManager em;
-    private final BoardDataRepository boardDataRepository;
+    private final BoardDataRepository repository;
 
     public List<BoardData> gets() {
         QBoardData boardData = QBoardData.boardData;
@@ -28,7 +28,5 @@ public class BoardListService {
 
         List<BoardData> items = query.fetch();
         return items;
-
     }
-
 }

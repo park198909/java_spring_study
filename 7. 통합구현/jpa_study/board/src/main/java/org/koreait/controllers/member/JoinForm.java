@@ -11,13 +11,15 @@ public class JoinForm {
     @NotBlank
     @Size(min=6)
     private String userId;
-    @NotBlank
+
     @Size(min=8)
     private String userPw;
-    @NotBlank
+
     private String userPwRe;
+
     @NotBlank
     private String userNm;
+
     @Email
     private String email;
     private String mobile;
@@ -25,7 +27,6 @@ public class JoinForm {
     private String zipcode;
     private String address;
     private String addressSub;
-
 
     @AssertTrue
     private boolean agree;

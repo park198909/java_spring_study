@@ -6,7 +6,9 @@ import org.koreait.repositories.MemberRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.*;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -21,17 +23,15 @@ public class MemberInfoService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        Member member = repository.findByUserId(username);  // username
+        Member member = repository.findByUserId(username);
         if (member == null) {
             throw new UsernameNotFoundException(username);
         }
 
-//        return MemberInfo.builder().userNo(member.getUserNo()).userId(member.getUserId()).userNm(member.getUserNm())
-//                .email(member.getEmail()).mobile(member.getMobile()).build();
-
         MemberInfo memberInfo = new ModelMapper().map(member, MemberInfo.class);
 
-        List<GrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority(member.getType().toString()));
+        List<GrantedAuthority> authorities = Arrays.asList(
+                new SimpleGrantedAuthority(member.getType().toString()));
 
         memberInfo.setAuthorities(authorities);
 

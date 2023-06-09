@@ -12,10 +12,12 @@ import java.util.Optional;
 public class AuditorAwareImpl implements AuditorAware<Long> {
 
     private final MemberUtils memberUtils;
+
     @Override
     public Optional<Long> getCurrentAuditor() {
 
         Long userNo = memberUtils.isLogin() ? memberUtils.getMember().getUserNo() : null;
+
 
         return Optional.ofNullable(userNo);
     }

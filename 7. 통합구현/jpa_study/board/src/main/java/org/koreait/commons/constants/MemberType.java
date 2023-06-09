@@ -1,6 +1,6 @@
 package org.koreait.commons.constants;
 
 public enum MemberType {
-    USER,   // 회원
-    ADMIN   // 관리자
+    USER, // 일반회원
+    ADMIN // 관리자
 }

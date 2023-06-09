@@ -2,6 +2,7 @@ package org.koreait.models.member;
 
 public class LoginValidationException extends RuntimeException {
     private String field;
+
     public LoginValidationException(String field, String message) {
         super(message);
         this.field = field;

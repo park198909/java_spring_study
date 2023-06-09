@@ -5,7 +5,13 @@
     <main layout:fragment="content">
         <form name="frmJoin" method="post" th:action="@{/member/join}" th:object="${joinForm}">
             <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
-
+            <th:block th:if="${session.kakao != null}">
+                <input type="hidden" name="socialChannel" value="kakao">
+                <dl>
+                    <dt></dt>
+                    <dd>카카오 계정으로 회원가입</dd>
+                </dl>
+            </th:block>
             <dl>
                 <dt th:text="#{userId}"></dt>
                 <dd>
@@ -14,15 +20,14 @@
                 </dd>
             </dl>
 
-            <dl>
+            <dl th:if="${session.kakao == null}">
                 <dt th:text="#{userPw}"></dt>
                 <dd>
                     <input type="password" name="userPw" th:field="*{userPw}">
                     <div class="errors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
                 </dd>
             </dl>
-
-            <dl>
+            <dl th:if="${session.kakao == null}">
                 <dt th:text="#{userPwRe}"></dt>
                 <dd>
                     <input type="password" name="userPwRe" th:field="*{userPwRe}">
@@ -53,48 +58,11 @@
                     <div class="errors" th:each="err : ${#fields.errors('mobile')}" th:text="${err}"></div>
                 </dd>
             </dl>
-            <dl>
-                <dt>주소</dt>
-                <dd>
-                    <diV>
-                        <input type="text" name="zipcode" id="zipcode1" th:field="*{zipcode}" readonly>
-                        <button type="button" class="search_address"
-                                data-address-id="address1" data-zipcode-id="zipcode1">주소찾기</button>
-                    </diV>
-                    <input type="text" name="address" th:field="*{address}" readonly>
-                    <input type="text" name="addressSub" th:field="*{addressSub}" readonly>
-                </dd>
-            </dl>
-            <dl>
-                <dt>주소</dt>
-                <dd>
-                    <diV>
-                        <input type="text" name="zipcode" id="zipcode2" th:field="*{zipcode}" readonly>
-                        <button type="button" class="search_address"
-                                data-address-id="address2" data-zipcode-id="zipcode2">주소찾기</button>
-                    </diV>
-                    <input type="text" name="address" th:field="*{address}" readonly>
-                    <input type="text" name="addressSub" th:field="*{addressSub}" readonly>
-                </dd>
-            </dl>
-            <dl>
-                <dt>주소</dt>
-                <dd>
-                    <diV>
-                        <input type="text" name="zipcode" id="zipcode3" th:field="*{zipcode}" readonly>
-                        <button type="button" class="search_address"
-                                data-address-id="address3" data-zipcode-id="zipcode3">주소찾기</button>
-                    </diV>
-                    <input type="text" name="address" th:field="*{address}" readonly>
-                    <input type="text" name="addressSub" th:field="*{addressSub}" readonly>
-                </dd>
-            </dl>
             <div>
                 <input type="checkbox" name="agree" value="true" id="agree" th:field="*{agree}">
                 <label for="agree" th:text="#{member.terms.agree}"></label>
                 <div class="errors" th:each="err : ${#fields.errors('agree')}" th:text="${err}"></div>
             </div>
-
             <button type="submit" th:text="#{member.btn.join}"></button>
         </form>
     </main>

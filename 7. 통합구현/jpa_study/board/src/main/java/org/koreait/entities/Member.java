@@ -1,45 +1,53 @@
 package org.koreait.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.koreait.commons.constants.MemberType;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity @Data @Builder
-@NoArgsConstructor @AllArgsConstructor
+@AllArgsConstructor @NoArgsConstructor
 public class Member extends BaseEntity {
     @Id @GeneratedValue
-    private Long userNo;
+    private Long userNo; // 회원번호
 
-    @Column(nullable = false, length = 40, unique = true)
-    private String userId;
+    @Column(length=40, nullable = false, unique = true)
+    private String userId; // 아이디
 
-    @Column(nullable = false, length = 65)
-    private String userPw;
+    @Column(length=65)
+    private String userPw; // 비밀번호
 
-    @Column(nullable = false, length = 40)
-    private String userNm;
+    @Column(length=40, nullable=false)
+    private String userNm; // 회원명
 
-    @Column(length = 100)
-    private String email;
+    @Column(length=100)
+    private String email; // 이메일
 
-    @Column(length = 11)
-    private String mobile;
-
-    @Column(length = 10)
-    private String zipcode;
-    @Column(length = 100)
-    private String address;
-    @Column(length = 100)
-    private String addressSub;
+    @Column(length=11)
+    private String mobile; // 휴대전화 번호
 
     @Enumerated(EnumType.STRING)
-    @Column(length = 20)
-    private MemberType type;    // USER : 사용자 , ADMIN : 관리자
+    @Column(length=20)
+    private MemberType type = MemberType.USER; // USER - 사용자, ADMIN - 관리자
+
+    @Column(length=10)
+    private String zipcode;
+    @Column(length=100)
+    private String address;
+    @Column(length=100)
+    private String addressSub;
+
+    @Column(length=10)
+    private String socialChannel;
+
+    @Column(length=40)
+    private String socialId;
 
     @OneToMany(mappedBy = "member")
     private List<BoardData> boardDatas = new ArrayList<>();
-
 }
